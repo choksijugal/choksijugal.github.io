@@ -1,0 +1,192 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="css\materialize.min.css">
+	    <link type="text/css" rel="stylesheet" href="css\materialize.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+        <style>
+        @keyframes backgroundscroller {
+  from {
+    background-position: 0% 0%;    
+  }
+  to {    background-position: 500% 500%, 400% 400%, 300% 300%, 200% 200%, 100% 100%;    
+  }
+}
+
+  body
+			{
+				background-color: rgba(255,255,255,0.9);
+				background-image: url('img/bg1.png');
+	font-family: 'Montserrat', sans-serif;
+		 animation-name: backgroundscroller;
+  animation-duration: 420s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal; 
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  bottom: 0px;
+			}
+        
+          
+         #items_box {
+             background: white;
+             padding: 0px;
+              border-style: solid;
+            border-width: 1px;
+            border-color:rgba(100,100,100,0.9);
+         }
+         #cart_head {
+             width:100%;
+             font-weight: bold;
+             font-size: 18px;
+             padding: 18px 0px 4px 25px;
+             border-width:0px 0px 1px 0px;
+             border-style: solid;
+             border-color:rgba(100,100,100,0.9);
+         }
+         .qty {
+             padding-left: 25%;
+             padding-right: 25%;
+             text-align: center;
+         }
+         .img {
+             padding:8px;
+         }
+         .poster_title {
+             padding-top: 8px;
+             border-width:0px 0px 1px 0px;
+             border-style: solid;
+             border-color:rgba(100,100,100,0.9);
+             font-weight: bold;
+             font-size:18px;
+         }
+         .poster_details {
+             padding-top: 12px;
+
+         }
+         #artist {
+             font-size: 12px;
+         }
+         #cost {
+             line-height: 50px;
+             font-size: 22px;
+         }
+         #mrp {
+             font-size: 12px;
+             display: inline;
+             text-decoration: line-through;
+         }
+         .remove {
+             padding-top: 8px;
+             font-size: 16px;
+         }
+         #delivery {
+             padding-top:5px;
+             padding-bottom: 5px;
+         }
+         #btn1 button{
+             padding:0px 5px 0px 5px;
+             background:#eeeeee;
+             color: #000;
+             width:100%;
+             height: 45px;         }
+         #btn2 button{
+             padding:0px 5px 0px 5px;
+             background:#3fc3ff;
+             color: #fff;
+             width:100%;
+             height: 45px;
+         }
+         .buttons {
+             margin: 0px 0px 18px 0px;
+         }
+        .item {
+             border-width:0px 0px 1px 0px;
+             border-style: solid;
+             border-color:rgba(100,100,100,0.9);
+         }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+                <form action="#" method="POST">
+                    <div class="col s12 m7 l7 offset-m1 offset-l1" id="items_box" style="margin-top:20px;">
+                        <div class="col row" id="cart_head">
+                            MY CART (3)
+                        </div>
+                        <div class="col s12 row item"> 
+                            <div class="col s4 m2 l2">
+                                <img class="responsive-img img" src="img\poster1.jpg">
+                                <div class="qty">
+                                    <input type="number" class="qty" name="qty1" value="1">
+                                </div>
+                            </div>
+                            <div class="col s8 m6 l6">
+                                <div class="poster_title">
+                                    Captain America
+                                </div>
+                                <div class="poster_details">
+                                    <div id="artist">
+                                        Textured Print <br>
+                                        Artist: Yash Tamrakar
+                                    </div>
+                                    <div id="cost">
+                                        Cost: &#8377;120
+                                    </div>
+                                </div>
+                                <div class="remove">
+                                    <a href ="#">REMOVE</a>
+                                </div>
+                            </div>
+                            <div class="col s8 m4 l4 offset-s4" id="delivery">
+                                Delivery by Wednesday, July 12 
+                            </div>
+                        </div>
+                        
+                        <div class="col s12 row item"> 
+                            <div class="col s4 m2 l2">
+                                <img class="responsive-img img" src="img\poster2.jpg">
+                                <div class="qty">
+                                    <input type="number" class="qty" name="qty2" value="2">
+                                </div>
+                            </div>
+                            <div class="col s8 m6 l6">
+                                <div class="poster_title">
+                                    Vintage Car Art
+                                </div>
+                                <div class="poster_details">
+                                   <div id="artist">
+                                        Glossy Print <br>
+                                        Artist: Yash Tamrakar
+                                    </div>
+                                    <div id="cost">
+                                        Cost: &#8377;150
+                                        <div id="mrp">
+                                             &#8377;200
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="remove">
+                                    <a href ="#">REMOVE</a>
+                                </div>
+                            </div>
+                            <div class="col s10 m4 l4 offset-s4" id="delivery">
+                                Delivery by Saturday, July 15 
+                            </div>
+                        </div> 
+                        <div class="col s12 buttons">
+                            <div id="btn1" class=" col s6 m6 l4 offset-l3">
+                                <button class="btn waves-effect waves-light col s12 m10 l8 offset-m1 offset-l2" id="login_button" type="submit" name="action"><strong>&lt;&nbsp;</strong>CONTINUE SHOPPING
+								</button>
+                                </div>
+                            <div id="btn2" class=" col s6 m6 l4">
+                                <button class="btn waves-effect waves-light col s12 m10 l8 offset-m1 offset-l2" id="login_button" type="submit" name="action">PLACE ORDER
+								</button>
+                            </div>
+                        </div>                      
+                    </div>
+                </form>
+        </div>       
+    </body>
+</html>
+    
