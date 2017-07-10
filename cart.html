@@ -98,6 +98,10 @@
          .summary {
              padding: 0px;
          }
+         #summary {
+               position:fixed;
+             margin-left:67%;
+         }
          .summary_head {
              width:100%;
              font-weight: bold;
@@ -126,6 +130,12 @@
  #wrappr{
      margin: 40px;
  }
+ #summary {
+     position:relative;
+     margin:auto;
+     display: block;
+     z-index: -1;
+ }
 }
         </style>
     </head>
@@ -134,7 +144,7 @@
                   <form action="#" method="POST">                    
                      <div class="col s12 m12 l7 offset-l1" id="items_box">
                         <div class="col row" id="cart_head">
-                            MY CART (3)
+                            MY CART (4)
                         </div>
                         <div class="col s12 item"> 
                             <div class="col s4 m4 l2">
@@ -165,6 +175,36 @@
                             </div>
                             <div class="row"></div>
                         </div>
+
+<div class="col s12 item"> 
+                            <div class="col s4 m4 l2">
+                                <img class="responsive-img img" src="img\poster1.jpg">
+                                <div class="qty">
+                                    <input type="number" class="qty" name="qty1" value="1">
+                                </div>
+                            </div>
+                            <div class="col s8 m8 l6">
+                                <div class="poster_title">
+                                    Captain America Large
+                                </div>
+                                <div class="poster_details">
+                                    <div id="artist">
+                                        Textured Print <br>
+                                        Artist: Yash Tamrakar
+                                    </div>
+                                    <div id="cost">
+                                        Cost: &#8377;150
+                                    </div>
+                                </div>
+                                <div class="remove">
+                                    <a href ="#">REMOVE</a>
+                                </div>
+                            </div>
+                            <div class="col s8 m8 l4 offset-s4 offset-m4" id="delivery">
+                                Delivery by Wednesday, July 12 
+                            </div>
+                            <div class="row"></div>
+</div>
                         
                         <div class="col s12 item"> 
                            <div class="col s4 m4 l2">
@@ -200,7 +240,7 @@
                         </div>                      
 
                 </div>
-                <div class="col s12 m12 l3 summary">
+                <div class="col s12 m12 l3 summary" id="summary">
                         <div class="summary_head">
                             ORDER SUMMARY
                         </div>
@@ -208,10 +248,10 @@
                             <table>
                                 <tr>
                                     <td>
-                                        Price (3 Items) 
+                                        Price (4 Items) 
                                     </td>
                                     <td align="right">
-                                        &#8377;420
+                                        &#8377;570
                                     </td>
                                 </tr> 
                                 <tr>
@@ -231,7 +271,7 @@
                                         Amount Payable
                                     </td>
                                     <td>
-                                        &#8377;420
+                                        &#8377;570
                                     </td>
                                 </tr>
                             </table>
