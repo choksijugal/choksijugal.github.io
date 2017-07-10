@@ -243,7 +243,7 @@ button:focus {outline:0 !important;}
 ul{
 width:600em;
 list-style-type:none;
-padding:0px 0 10px 0;
+padding:0px 0px 10px 0px;
 }
 
 #content{
@@ -275,6 +275,9 @@ padding:0px 0 10px 0;
   transform: scale(1.1); 
   z-index:100;
   position:relative;
+  border-style: solid;
+  border-color:#3fc3ff;
+  border-width: 2px;
   transition-timing-function:cubic-bezier(0.5, 0, 0.1, 1);
   transition-duration:400ms;  
 }
@@ -305,7 +308,7 @@ table {
     background: #bbbbbb;
     width:75%;
     border-radius:4px;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0px 40px 0px;
 }
 #comments_own {
     font-family: Garamond, serif;
@@ -356,21 +359,11 @@ textarea {
      width:100%;
  }
 }
-#load{
-    width:100%;
-    height:100%;
-    position:fixed;
-    z-index:9999;
-    background:url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center rgba(0,0,0,0.25)
-}
 </style>
 
     </head>
 
     <body>
-        <div id="load">
-        </div>
-        <div id="contents"></div>
         <div class="wrappr" style="margin:40px 0px 40px 0px;padding: 0% 4% 0% 4%;">
             <div class="row" style="margin-bottom:0px;">
             <div class="col s12 l4" id="frame_container">
@@ -497,7 +490,7 @@ textarea {
 					</button>
                 </div>
                 <div class="col s12" id="poster_description">
-                    Artist: <a href="#" id="artist">Yash Tamrakar</a>
+                    Artist: <a href="#" id="artist"><b>Yash Tamrakar</b></a>
                 </div>
                 <div class="col s12" id="buttons">
                     <div class="col s6" id="btn">
@@ -514,10 +507,10 @@ textarea {
         <div class="row">
             <div class="col s10 l4 offset-l4 offset-s1" id="buttons2">
                     <div class="col s6" id="btn">
-                    <button class="btn waves-effect waves-light col s6" id="checkout" type="submit" name="action"><i class="fa fa-shopping-cart" style="font-size:16px;"></i>&nbsp;&nbsp;BUY NOW
+                    <button class="btn waves-effect waves-light col s6" id="checkout" type="submit" name="action"><i class="fa fa-bolt" style="font-size:16px;"></i>&nbsp;&nbsp;BUY NOW
 							</button>
                     </div><div class="col s6" id="btn">
-                    <button class="btn waves-effect waves-light col s6" id="checkout" type="submit" name="action"><i class="fa fa-plus" style="font-size:16px;"></i>&nbsp;&nbsp;Add To Cart
+                    <button class="btn waves-effect waves-light col s6" id="checkout" type="submit" name="action"><i class="fa fa-shopping-cart" style="font-size:16px;"></i>&nbsp;&nbsp;Add To Cart
 							</button>
                     </div>
                 </div>
@@ -705,22 +698,8 @@ textarea {
   
   
 </div>
-</div>
+
     </div>
-    <script>
-    document.onreadystatechange = function () {
-  var state = document.readyState
-  if (state == 'interactive') {
-       document.getElementById('contents').style.visibility="hidden";
-  } else if (state == 'complete') {
-      setTimeout(function(){
-         document.getElementById('interactive');
-         document.getElementById('load').style.visibility="hidden";
-         document.getElementById('contents').style.visibility="visible";
-      },1000);
-  }
-}
-    </script>
 <script>
     $('#controlR').click(function() {
       event.preventDefault();
