@@ -2,6 +2,7 @@
     <head>
         <link type="text/css" rel="stylesheet" href="css\materialize.min.css">
 	    <link type="text/css" rel="stylesheet" href="css\materialize.css">
+	    <link type="text/css" rel="stylesheet" href="css\font-awesome.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
@@ -32,12 +33,11 @@
         #frame_container {
             font-family: "Garamond", serif;
             font-size: 24px;
-            padding-left:4%;
         }
         #frame, #paper {
             background: #ddd;
-            width:20%;
-            height:90px;
+            width:24%;
+            height:100px;
             margin:0px 3px 18px 0px;
             display:inline;
             padding:0px;
@@ -49,24 +49,38 @@
         #frame_head, #paper_head {
             margin-bottom:4px;
         }
-        #cost {
-            font-size:48px;
-        }
         #poster {
             
             height:450px;
-            padding: 10px 20px 10px 20px;
+            padding: 10px 20px 0px 20px;
         }
          @media only screen and (max-width: 992px) {
  #off {
      display: inline;
  }
+ #frame, #paper {
+     width: 16%
+ }
+ #poster {
+     margin-top:10px;
+ }
+}
+#poster_title {
+    font-family: Garamond, serif;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+}
+#poster_description {
+    padding:5px;
 }
         </style>
+
+    
     </head>
 
     <body>
-        <div class="row" style="padding-top:40px;">
+        <div class="wrappr" style="margin-top:40px;padding: 0% 4% 0% 4%;">
+            <div class="row">
             <div class="col s12 l4" id="frame_container">
                 <div class="col s12" id="frame_head">
                     Select Frame:
@@ -160,11 +174,23 @@
                     
                 </div>
             </div>
-            <div class="col s10 l4 offset-s1" id="poster">
-                <img src="img/poster1.jpg" height="100%">
+            <div class="col s10 l4 center-align" id="poster">
+                <img src="img/poster1.jpg" height="100%" style="height:100%;" width="90%">
             </div>
+           
+            <div class="col s10 l4 offset-s1">
+                <div class="col s12" id="poster_title">
+                    <h4>Sparked Captain America</h4>
+                </div>
+                <div class="col s12" id="poster_description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                </div>
+                
+            </div>
+  
         </div>
-
+    </div>
         <script>
         $(document).ready(function(e) {
   var $radios = $(':radio[name="frame"]'), //cached reference to radios elements
@@ -195,5 +221,6 @@
   });
 });
         </script>
+        
     </body>
 </html>
