@@ -304,7 +304,8 @@ padding:0px 0 10px 0;
 table {
     background: #bbbbbb;
     width:75%;
-    margin: 10px 0px 20px 0px;
+    border-radius:4px;
+    margin: 10px 0px 0px 0px;
 }
 #comments_own {
     font-family: Garamond, serif;
@@ -312,12 +313,31 @@ table {
     padding:10px 0px 5px 15px;
     border-style:solid;
     border-width: 0px 0px 1px 0px;
+    font-weight: bold;
 }
 
 #comment {
     margin: 0px;
     padding: 10px 0px 10px 20px;
-    padding
+}
+textarea {
+    background: white;
+    resize: none;
+    border-radius: 6px 6px 6px 0px;
+    height:75px;
+}
+#comment_button {
+    background: #3fc3ff;
+    height: 45px;
+    border-radius: 0px 0px 0px 6px;
+    margin:0px;
+}
+#clear_button {
+    background: #eee;
+    color:#000;
+    height: 45px;
+    border-radius: 0px 0px 6px 0px;
+    margin-left:-5px;
 }
  @media only screen and (max-width: 992px) {
  #off {
@@ -332,7 +352,11 @@ table {
  table {
      width:100%;
  }
+ textarea {
+     width:100%;
+ }
 }
+
 </style>
 
     </head>
@@ -516,7 +540,18 @@ table {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                     </td>
                 </tr>
-            </table>
+                    <tr>
+                    <td>
+                        <form>
+                        <textarea placeholder="Type Your Comment Here"></textarea>
+                        <button class="btn waves-effect waves-light col s6" style="" id="comment_button" type="submit" name="action"><i class="fa fa-paper-plane" style="font-size:16px;"></i>&nbsp;&nbsp;Post
+							</button>
+                            <button class="btn waves-effect waves-light col s6" style="display:inline;" id="clear_button" type="reset" value="reset" name="action"><i class="fa fa-eraser" style="font-size:16px;"></i>&nbsp;&nbsp;Clear
+							</button>
+                        </form>
+                </td>
+                </tr>
+                </table>
         <div class="" id="comments_head" style="width:75%">
                 Similar Posters:
         </div>
