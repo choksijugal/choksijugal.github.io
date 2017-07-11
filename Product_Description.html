@@ -77,6 +77,9 @@
 #delivery {
     padding:10px 0px 5px 15px;
 }
+#delivery button {
+    width:10%;
+}
 #artist {
     color: #3fc3ff;
     display: inline;
@@ -108,10 +111,22 @@
 #delivery input {
     height:40px;
 }
-#delivery button {
+
+#pin_button button{
     margin: 0px 0px 0px -5px;
     height:40px;
-    width:auto;
+    width:20%;
+    padding:0px;
+    display:inline;
+    box-shadow: none;
+    background: #3fc3ff;
+}
+
+#share_button button{
+    margin: 0px 0px 0px 5px;
+    height:40px;
+    width:30%;
+    padding:0px;
     display:inline;
     box-shadow: none;
     background: #3fc3ff;
@@ -146,7 +161,7 @@ button:focus {outline:0 !important;}
   width:4%;
   height:330px;
   z-index:40;
-  background:#fff;
+  background:rgba(255,255,255,0.8);
   opacity:1;
   cursor:pointer;
   text-align:center;
@@ -191,7 +206,7 @@ button:focus {outline:0 !important;}
   width:4%;
   height:330px;
   z-index:40;
-  background:rgba(255,255,255,1);
+  background:rgba(255,255,255,0.8);
   opacity:1;
   cursor:pointer;
   text-align:center;
@@ -507,9 +522,15 @@ textarea {
                     
                     Check Delivery:
                                
-                    <input id="pin_code" type="text" class="validate" style="display:inline;width:40%" placeholder="Enter Pincode">
+                    <input id="pin_code" type="text" class="validate" style="display:inline;width:20%" placeholder="Enter PIN">
+                    <div id="pin_button" style="display:inline;">
                     <button class="btn waves-effect waves-light" type="submit" name="pincode">Check
 					</button>
+                    </div>
+                    <div id="share_button" style="display:inline;">
+                    <button class="btn waves-effect waves-light" type="submit" name="pincode"><i class="fa fa-share-alt" style="font-size:14px;"></i>&nbsp;Share
+					</button>
+                    </div>
                 </div>
                 <div class="col s12" id="poster_description">
                     Artist: <a href="#" id="artist"><b>Yash Tamrakar</b></a>
