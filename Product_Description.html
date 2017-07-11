@@ -305,7 +305,7 @@ padding:0px 0px 10px 0px;
     
 }
 table {
-    background: #bbbbbb;
+    background: rgba(220,220,220,0.5);
     width:75%;
     border-radius:4px;
     margin: 10px 0px 40px 0px;
@@ -359,6 +359,24 @@ textarea {
      width:100%;
  }
 }
+* {margin: 0; padding: 0;}
+.magnify {margin: 0px auto; position: relative;}
+
+.large {
+	width: 175px; height: 175px;
+	position: absolute;
+	border-radius: 100%;
+	
+	box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 
+	0 0 7px 7px rgba(0, 0, 0, 0.25), 
+	inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+	
+	background: url('img/poster1.jpg') no-repeat;
+	
+	display: none;
+}
+
+.small { display: block; }
 </style>
 
     </head>
@@ -460,7 +478,11 @@ textarea {
                 </div>
             </div>
             <div class="col s10 l4 center-align" id="poster">
-                <img src="img/poster1.jpg" height="100%" style="height:100%;" width="90%">
+                <div class="magnify">
+                    	<div class="large"></div>
+
+                <img  class="small" src="img/poster1.jpg" height="100%" style="height:100%;" width="90%">
+                </div>
             </div>
            
             <div class="col s10 l4 offset-s1">
@@ -688,18 +710,62 @@ textarea {
     
    
     
-  </div><!--end of module-section-->
+  </div>
   
 <span id="controlR" class="right-controls" role="button" aria-label="See Previous Modules">
     <b class="fa fa-chevron-right fa-chevron-right-extra" aria-hidden="true"></b>
   </span>
-<!-- <button class="btn arrow-guides-right fa-chevron-right"></button> -->
-  
   
   
 </div>
 
     </div>
+    <script>
+    $(document).ready(function(){
+
+	var native_width = 0;
+	var native_height = 0;
+
+	$(".magnify").mousemove(function(e){
+		if(!native_width && !native_height)
+		{
+			var image_object = new Image();
+			image_object.src = $(".small").attr("src");
+			
+			native_width = image_object.width;
+			native_height = image_object.height;
+		}
+		else
+		{
+			var magnify_offset = $(this).offset();
+			var mx = e.pageX - magnify_offset.left;
+			var my = e.pageY - magnify_offset.top;
+			
+			if(mx < $(this).width() && my < $(this).height() && mx > 0 && my > 0)
+			{
+				$(".large").fadeIn(100);
+			}
+			else
+			{
+				$(".large").fadeOut(100);
+			}
+			if($(".large").is(":visible"))
+			{
+				var rx = Math.round(mx/$(".small").width()*native_width - $(".large").width()/2)*-1;
+				var ry = Math.round(my/$(".small").height()*native_height - $(".large").height()/2)*-1;
+				var bgp = rx + "px " + ry + "px";
+				
+				var px = mx - $(".large").width()/2;
+				var py = my - $(".large").height()/2;
+				
+				$(".large").css({left: px, top: py, backgroundPosition: bgp});
+			}
+		}
+	})
+})
+</script>
+    <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
+<script src="http://thecodeplayer.com/uploads/js/jquery-1.7.1.min.js" type="text/javascript"></script>
 <script>
     $('#controlR').click(function() {
       event.preventDefault();
@@ -719,30 +785,26 @@ textarea {
 
         <script>
         $(document).ready(function(e) {
-  var $radios = $(':radio[name="frame"]'), //cached reference to radios elements
-    $divs = $radios.parent(); //the divs are the parent element of radio
+  var $radios = $(':radio[name="frame"]'),
+    $divs = $radios.parent(); 
   $radios.bind('change', function() {
     var $this = $(this),
       $div = $this.parent();
 
-    //change the color of the current div
     $div.css('color', this.checked ? '#3fc3ff' : '#ffffff');
-    //chang the color of all other divs
     $divs.not($div).css('color', '#ffffff');
   });
 });
         </script>
         <script>
         $(document).ready(function(e) {
-  var $radios = $(':radio[name="paper"]'), //cached reference to radios elements
-    $divs = $radios.parent(); //the divs are the parent element of radio
+  var $radios = $(':radio[name="paper"]'), 
+    $divs = $radios.parent(); 
   $radios.bind('change', function() {
     var $this = $(this),
       $div = $this.parent();
 
-    //change the color of the current div
     $div.css('color', this.checked ? '#3fc3ff' : '#ffffff');
-    //chang the color of all other divs
     $divs.not($div).css('color', '#ffffff');
   });
 });
