@@ -17,7 +17,7 @@
 	<div class="nav-wrapper">
 		<a class="logoname" href="http://www.postinc.in/index.php#Us" class="brand-logo">POSTINC</a>
 		<span class="beta">BETA</span>
-		<a class="logoname brand-logo"" href="http://www.postinc.in/blog"><?php 
+		<a class="logoname brand-logo" href="http://www.postinc.in/blog"><?php 
 		if(mb_substr($_SERVER['REQUEST_URI'], 0, 5)=="/blog")
 			{
 				echo "&nbsp;";
