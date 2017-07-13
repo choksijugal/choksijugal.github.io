@@ -1,0 +1,9 @@
+Homepage:
+Sidenav close on tap, Store none and Blue line on hover
+Carousel change, buttons navigation and link to each image
+Trending posters square card, hover blue line
+Categories block links layout
+Recently viewed Suggestions
+
+Categories:
+

@@ -1,4 +1,4 @@
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript">
 	$( document ).ready(function(){
 	  $(".button-collapse").sideNav();
@@ -16,8 +16,8 @@
 <nav class="black z-depth-5" role="navigation">
 	<div class="nav-wrapper">
 		<a class="logoname" href="http://www.postinc.in/index.php#Us" class="brand-logo">POSTINC</a>
-		<span class="beta">BETA</span>
-		<a class="logoname brand-logo" href="http://www.postinc.in/blog"><?php 
+		<span class="beta">STORE</span>
+		<a class="logoname brand-logo"" href="http://www.postinc.in/blog"><?php 
 		if(mb_substr($_SERVER['REQUEST_URI'], 0, 5)=="/blog")
 			{
 				echo "&nbsp;";
