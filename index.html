@@ -33,7 +33,7 @@
 	border-width:1px;
 	border-color:#eeeeee;
 	
-	margin-top:80px;
+	margin-top:40px;
 	padding:0px;
 	}
 	
@@ -94,14 +94,14 @@ div.tab button {
 }
 
 div.tab button:hover {
-	box-shadow: inset 0 -4px #b2ebf2;
+	box-shadow: inset 0 -2px #b2ebf2;
  	transition: box-shadow 0.1s ease-in;
 }
 
 div.tab button.active {
     background-color: #000;
 	font-color:white;
-	box-shadow: inset 0 -4px #3fc3ff;
+	box-shadow: inset 0 -2px #3fc3ff;
 }
 
 
@@ -131,7 +131,7 @@ margin:0px;
 
 #share-buttons img {
 width: 72px;
-padding: 18px;
+padding:0px 18px 0px 18px;
 border: 0;
 box-shadow: 0;
 display: inline;
@@ -147,6 +147,7 @@ color:#000;
 #login_button, #signup_button, #upload_button {
 	height:45px;
 	background:#3fc3ff;
+	text-transform: none;
 }
 
 #login_form {
@@ -205,7 +206,7 @@ table {
 									<input id="password" type="password" class="validate">
 									<label for="password">Password</label>
 									
-										<button class="btn waves-effect waves-light col s12 m10 l8 offset-m1 offset-l2" id="login_button" type="submit" name="action">LOGIN
+										<button class="btn waves-effect waves-light col s12 m10 l8 offset-m1 offset-l2" id="login_button" type="submit" name="action">Login
 										</button>
 									</div>
 								</form>
@@ -258,7 +259,7 @@ table {
 									
 								<div class="file-field input-field">
 								  <div class="btn" id="upload_button" style="float:right">
-									<span>UPLOAD</span>
+									<span>Upload</span>
 									<input type="file">
 								  </div>
 								  <div class="file-path-wrapper">
@@ -272,9 +273,7 @@ table {
 					
 					<div class="col s1 m2"></div>
 					
-					<div class="row"></div>
-					
-					<div class="col s12 m12 l12 center-align row" id="share-buttons">
+					<div class="col s12 m12 l12 center-align row" id="share-buttons" style="margin-top:2px;">
 						<hr color="#3fc3ff" width="90%">
 						<h5 style="color:black">Alternate Login via</h5> 
 						<a href="#" class="waves-effect waves-light"><img src="img\icon_fb.png"></a>
