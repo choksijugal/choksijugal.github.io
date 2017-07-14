@@ -1,0 +1,20 @@
+Login
+Blue line thin
+Signup NO Scroll
+Button small
+button no caps
+
+pd
+Cost margin right
+Magnify rectangle
+Check button
+Input focus color change from green
+Margins remover from description
+Tags
+button no caps
+
+all buttons same height
+
+cart 
+font montserrat
++ button thin
