@@ -9,6 +9,7 @@ Cost margin right
 Magnify rectangle
 Check button
 Input focus color change from green
+Share button
 Margins remover from description
 Tags
 button no caps
