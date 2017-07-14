@@ -62,9 +62,11 @@
     font-family: Garamond, serif;
     border-style: solid;
     border-width: 0px 0px 1px 0px;
+    padding:0px;
 }
 #poster_description {
-    padding:15px;
+    padding:0px;
+    padding-top:15px;
 }
 #rating {
     padding: 10px 0px 10px 15px;
@@ -113,19 +115,20 @@
 }
 
 #pin_button button{
-    margin: 0px 0px 0px -5px;
+    margin: 0px 0px 0px -20px;
     height:40px;
     width:20%;
     padding:0px;
     display:inline;
     box-shadow: none;
-    background: #3fc3ff;
+    background: none;
+    color:#3fc3ff;
 }
 
 #share_button button{
-    margin: 0px 0px 0px 5px;
+    margin: 0px 0px 0px 10px;
     height:40px;
-    width:30%;
+    width:50px;
     padding:0px;
     display:inline;
     box-shadow: none;
@@ -369,6 +372,7 @@ textarea {
  #poster {
      margin-top:10px;
  }
+
  table {
      width:100%;
  }
@@ -380,17 +384,23 @@ textarea {
 .magnify {margin: 0px auto; position: relative;}
 
 .large {
-	width: 175px; height: 175px;
+	width: 600px; height: 175px;
 	position: absolute;
-	border-radius: 100%;
+	border-radius: 0%;
+        cursor: zoom-in;
 	
 	box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 
 	0 0 7px 7px rgba(0, 0, 0, 0.25), 
 	inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
 	
 	background: url('img/poster1.jpg') no-repeat;
-	
+	margin-left:0px;
 	display: none;
+}
+input#pin_code:focus, input#pin_code::after {
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #3fc3ff;
 }
 
 </style>
@@ -482,8 +492,8 @@ textarea {
     </div>
   </label>
                 </div>
-                <div class="col s12 cos rowt">
-                    <div class="col s12 l6" id-"cost">
+                <div class="col s12 cos row">
+                    <div class="col s12 l7" id="cost">
                        <h4 style="display:inline;">Cost: Rs. 120</h4> 
                     </div>
                     <div class="col s5">
@@ -523,13 +533,13 @@ textarea {
                     
                     Check Delivery:
                                
-                    <input id="pin_code" type="text" class="validate" style="display:inline;width:20%" placeholder="Pincode">
+                    <input id="pin_code" type="text" class="" style="display:inline;width:20%" placeholder="Pincode">
                     <div id="pin_button" style="display:inline;">
                     <button class="btn waves-effect waves-light" type="submit" name="pincode">Check
 					</button>
                     </div>
                     <div id="share_button" style="display:inline;">
-                    <button class="btn waves-effect waves-light" type="submit" name="pincode"><i class="fa fa-share-alt" style="font-size:14px;"></i>&nbsp;Share
+                    <button class="btn waves-effect waves-light" type="submit" name="pincode"><i class="fa fa-share-alt" style="font-size:14px;"></i>
 					</button>
                     </div>
                 </div>
@@ -775,7 +785,7 @@ textarea {
 			{
 				var rx = Math.round(mx/$(".small").width()*native_width - $(".large").width()/2)*-1;
 				var ry = Math.round(my/$(".small").height()*native_height - $(".large").height()/2)*-1;
-				var bgp = rx + "px " + ry + "px";
+				var bgp = rx + 30 + "px " + ry + "px";
 				
 				var px = mx - $(".large").width()/2;
 				var py = my - $(".large").height()/2;
