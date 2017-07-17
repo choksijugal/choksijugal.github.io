@@ -18,6 +18,127 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+      #cont {
+          background: rgba(0,0,0,0.3);
+          width:90%;
+          margin:40px 5% 0% 5%;
+          text-align:center; 
+      }
+      #trending_title {
+          font-family: 'Garamond', serif;
+          margin: 0px 20px 0px 20px;
+          border-style: solid;
+          border-width: 0px 0px 1px 0px;
+          border-color: #3fc3ff;
+          align:center;
+      }
+      #poster {
+          float : center;
+          border-style: solid;
+          border-style: none;
+          padding:15px 30px 15px 30px;
+      }
+      #row {
+          display: block;
+      }
+      #trending_posters {
+          padding: 20px;
+      }
+      #card-title {
+          font-size: 22px;
+          margin:0px;
+          padding: 0px;
+          display:inline;
+          align: left;
+          font-family: 'Garamond', serif;
+
+          color: #eee;
+      }
+      .card .card-content {
+          padding: 8px 0px 8px 6px;
+          background: #000;
+          color: #eee;
+          border-style: solid;
+          border-width: 0px 0px 1px 0px;
+          border-color: #3fc3ff;
+      }
+      .card .card-reveal {
+          background: rgba(0,0,0,0.9);
+      }
+      .card .card-reveal .card-title {
+          font-size: 20px;
+          font-family: 'Garamond', serif;
+      }
+      #border_bottom {
+          border-style: solid;
+          border-width: 0px 0px 1px 0px;
+          border-color: #3fc3ff;
+      }
+      .card .card-reveal p#margin{
+          margin: 15px 5px 5px 5px;
+          font-family: 'Montserrat', sans-serif;
+          text-align: justify;
+      }
+      #card_cost{
+          font-family: 'Garamond', serif;
+          text-align: center;
+      }
+      .card .card-reveal button {
+          background-color: #3fc3ff;
+          text-transform : none;
+          height: 40px;
+      }
+      .a {
+          background: #fff;
+          height: 360px;
+          width:100%;
+          margin: 20px 0px 20px 0px;
+          background-image: url("#");
+          background-size: contain;
+      }
+      .b {
+          background: #fff;
+          height: 360px;
+          width:100%;
+          margin: 20px 0px 20px 0px;
+          background-image: url("#");
+          background-size: contain;
+      }
+      .c {
+          height: 540px;
+          background: #fff;
+          background-image: url("#");
+          background-size: contain;
+          margin: 20px 0px 20px 0px;
+      }
+      .d {
+          height: 180px;
+          background: #fff;
+          background-image: url("#");
+          background-size: contain;
+          margin: 20px 0px 20px 0px;
+      }
+      .e {
+          background: #fff;
+          height: 360px;
+          width:100%;
+          margin: 20px 0px 20px 0px;
+          background-image: url("#");
+          background-size: contain;
+      }
+      .f {
+          background: #fff;
+          height: 360px;
+          width:100%;
+          margin: 20px 0px 20px 0px;
+          background-image: url("#");
+          background-size: contain;
+      }
+      .categories {
+          margin: 20px;
+      }
+</style>
 </head>
 
 <body onload="Materialize.showStaggeredList('#nav-mobile');">
@@ -115,81 +236,182 @@
         <!--Carousel End -->
 
         <!-- Display trending posters and poster categories -->
-        <div class="lowerpart">
-            <div class="lowerpart-inner">
-                <div class="row">
-                    <div class="col m12"><h5 class="lowertitle" align="center">Trending</h5></div>
+        <div class=" lowerpart row" style="width:100%;margin:0px;padding:0px;">
+            <div class="col s12" id="cont">
+                <div class="" id="trending_title">
+                   <h4>Trending Designs</h4>
                 </div>
-                <div class="row center-align posterdisplaydiv">
-                    <div class="col m1"><!-- <img class="posterdisplay" src="img/Image1.jpg"> --></div>
-                    <div class="col m2">
-                        <div class="posterdisplayimgdiv">
-                            <img class="posterdisplay" src="img/Image1.jpg">
+                <div class="col s12" id="trending_posters">
+                    <div class="col s6 m3" id="poster">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="img/poster1.jpg">
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator" id="card-title">Sparked Captain America<i class="material-icons right" style="display:inline;">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                                <p class="card-title" style="display:block; width:100%;height:20px;"><i class="material-icons right" style="display:inline;">close</i></p>
+                            <div class="card-title" id="border_bottom">Sparked Captain America</div>
+                            <p id="margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p><h5 id="card_cost">Cost: Rs. 120</h5></p>
+                            <button class="btn waves-effect waves-light col s12 m10 l8 offset-m1 offset-l2" id="checkout" type="submit" name="action">View Poster
+							</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col m2">
-                        <div class="posterdisplayimgdiv">
-                            <img class="posterdisplay" src="img/Image1.jpg">
+                    <div class="col s6 m3" id="poster">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="img/poster2.jpg">
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator" id="card-title">Sparked Captain America<i class="material-icons right" style="display:inline;">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                                <p class="card-title" style="display:block; width:100%;height:20px;"><i class="material-icons right" style="display:inline;">close</i></p>
+                            <div class="card-title" id="border_bottom">Sparked Captain America</div>
+                            <p id="margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p><h5 id="card_cost">Cost: Rs. 120</h5></p>
+                            <button class="btn waves-effect waves-light col s12 m10 l8 offset-m1 offset-l2" id="checkout" type="submit" name="action">View Poster
+							</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col m2">
-                        <div class="posterdisplayimgdiv">
-                            <img class="posterdisplay" src="img/Image1.jpg">
+                    <div class="col s6 m3" id="poster">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="img/poster1.jpg">
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator" id="card-title">Sparked Captain America<i class="material-icons right" style="display:inline;">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                                <p class="card-title" style="display:block; width:100%;height:20px;"><i class="material-icons right" style="display:inline;">close</i></p>
+                            <div class="card-title" id="border_bottom">Sparked Captain America</div>
+                            <p id="margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p><h5 id="card_cost">Cost: Rs. 120</h5></p>
+                            <button class="btn waves-effect waves-light col s12 m10 l8 offset-m1 offset-l2" id="checkout" type="submit" name="action">View Poster
+							</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col m2">
-                        <div class="posterdisplayimgdiv">
-                            <img class="posterdisplay" src="img/Image1.jpg">
+                    <div class="col s6 m3" id="poster">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="img/poster2.jpg">
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator" id="card-title">Sparked Captain America<i class="material-icons right" style="display:inline;">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                                <p class="card-title" style="display:block; width:100%;height:20px;"><i class="material-icons right" style="display:inline;">close</i></p>
+                            <div class="card-title" id="border_bottom">Sparked Captain America</div>
+                            <p id="margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p><h5 id="card_cost">Cost: Rs. 120</h5></p>
+                            <button class="btn waves-effect waves-light col s12 m10 l8 offset-m1 offset-l2" id="checkout" type="submit" name="action">View Poster
+							</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col m2">
-                        <div class="posterdisplayimgdiv">
-                            <img class="posterdisplay" src="img/Image1.jpg">
+                    <div class="col s6 m3" id="poster">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="img/poster2.jpg">
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator" id="card-title">Sparked Captain America<i class="material-icons right" style="display:inline;">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                                <p class="card-title" style="display:block; width:100%;height:20px;"><i class="material-icons right" style="display:inline;">close</i></p>
+                            <div class="card-title" id="border_bottom">Sparked Captain America</div>
+                            <p id="margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p><h5 id="card_cost">Cost: Rs. 120</h5></p>
+                            <button class="btn waves-effect waves-light col s12 m10 l8 offset-m1 offset-l2" id="checkout" type="submit" name="action">View Poster
+							</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col m1"><!-- <img class="posterdisplay" src="img/Image1.jpg"> --></div>                
+                    <div class="col s6 m3" id="poster">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="img/poster1.jpg">
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator" id="card-title">Sparked Captain America<i class="material-icons right" style="display:inline;">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                                <p class="card-title" style="display:block; width:100%;height:20px;"><i class="material-icons right" style="display:inline;">close</i></p>
+                            <div class="card-title" id="border_bottom">Sparked Captain America</div>
+                            <p id="margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p><h5 id="card_cost">Cost: Rs. 120</h5></p>
+                            <button class="btn waves-effect waves-light col s12 m10 l8 offset-m1 offset-l2" id="checkout" type="submit" name="action">View Poster
+							</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6 m3" id="poster">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="img/poster2.jpg">
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator" id="card-title">Sparked Captain America<i class="material-icons right" style="display:inline;">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                                <p class="card-title" style="display:block; width:100%;height:20px;"><i class="material-icons right" style="display:inline;">close</i></p>
+                            <div class="card-title" id="border_bottom">Sparked Captain America</div>
+                            <p id="margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p><h5 id="card_cost">Cost: Rs. 120</h5></p>
+                            <button class="btn waves-effect waves-light col s12 m10 l8 offset-m1 offset-l2" id="checkout" type="submit" name="action">View Poster
+							</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6 m3" id="poster">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="img/poster1.jpg">
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator" id="card-title">Sparked Captain America<i class="material-icons right" style="display:inline;">more_vert</i></span>
+                            </div>
+                            <div class="card-reveal">
+                                <p class="card-title" style="display:block; width:100%;height:20px;"><i class="material-icons right" style="display:inline;">close</i></p>
+                            <div class="card-title" id="border_bottom">Sparked Captain America</div>
+                            <p id="margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p><h5 id="card_cost">Cost: Rs. 120</h5></p>
+                            <button class="btn waves-effect waves-light col s12 m10 l8 offset-m1 offset-l2" id="checkout" type="submit" name="action">View Poster
+							</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <br>
-                <div class="row center-align posterdisplaydiv">
-                    <div class="col m1"><!-- <img class="posterdisplay" src="img/Image1.jpg"> --></div>
-                    <div class="col m2">
-                        <div class="posterdisplayimgdiv">
-                            <img class="posterdisplay" src="img/Image1.jpg">
-                        </div>
-                    </div>
-                    <div class="col m2">
-                        <div class="posterdisplayimgdiv">
-                            <img class="posterdisplay" src="img/Image1.jpg">
-                        </div>
-                    </div>
-                    <div class="col m2">
-                        <div class="posterdisplayimgdiv">
-                            <img class="posterdisplay" src="img/Image1.jpg">
-                        </div>
-                    </div>
-                    <div class="col m2">
-                        <div class="posterdisplayimgdiv">
-                            <img class="posterdisplay" src="img/Image1.jpg">
-                        </div>
-                    </div>
-                    <div class="col m2">
-                        <div class="posterdisplayimgdiv">
-                            <img class="posterdisplay" src="img/Image1.jpg">
-                        </div>
-                    </div>
-                    <div class="col m1"><!-- <img class="posterdisplay" src="img/Image1.jpg"> --></div>                
+                <div class="" id="trending_title">
+                   <h4>Categories</h4>
                 </div>
+                <div class="categories col s12">
+                    <div class="col s4">
+                        <div class="a">
 
-                <br>
-
-                <div class="row">
-                    <div class="col m12"><h5 class="lowertitle" align="center">Categories</h5></div>
-                </div>
-                <br><br>
-                <div class="row">
+                        </div>
+                        <div class="b">
+                        </div>
+                    </div>
+                    <div class="col s4">
+                        <div class="c"></div>
+                        <div class="d"></div>
+                    </div>
+                    <div class="col s4">
+                        <div class="e">
+                        </div>
+                        <div class="f">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        
     </div>
     <!-- End of trending posters and categories -->
     <script type="text/javascript" src="js/script.js"></script>
