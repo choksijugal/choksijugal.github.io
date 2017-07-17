@@ -35,6 +35,9 @@
           border-color: #3fc3ff;
           align:center;
       }
+      .zindex{
+        z-index: 1000000000000;
+      }
       #poster {
           float : center;
           border-style: solid;
@@ -47,6 +50,7 @@
       #trending_posters {
           padding: 20px;
       }
+    
       #card-title {
           font-size: 22px;
           margin:0px;
@@ -141,6 +145,7 @@
           margin: 20px;
           display: block;
       }
+      
 
       html {
     overflow: scroll;
@@ -225,6 +230,7 @@ ul{
 width:600em;
 list-style-type:none;
 padding:0px 0px 10px 0px;
+z-index: 0;
 }
 
 #contnt{
@@ -287,7 +293,7 @@ padding:0px 0px 10px 0px;
    <!-- Header begin -->
    <div class="row">
        <div class="col m12">
-            <div class="navbar-fixed" id="storeheader">
+            <div class="navbar-fixed" id="storeheader" style="z-index:1100">
                 <nav class="black z-depth-5" role="navigation">
                     <div class="nav-wrapper">
                         <div class="col m4">
@@ -315,7 +321,7 @@ padding:0px 0px 10px 0px;
         <li>Store</li>
         <li>Blog</li>
     </ul> -->
-    <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav" style="z-index:1000">
         <div id="searchbox">
             <nav id="searchboxnav">
                 <div class="nav-wrapper">
@@ -329,16 +335,18 @@ padding:0px 0px 10px 0px;
             </nav>
         </div>
         <div class="sidenavcategories">
-        <a href="#">TV Series</a><hr>
-        <a href="#">Vehicles</a><hr>
-        <a href="#">Anime</a><hr>
-        <a href="#">Gaming</a><hr>
-        <a href="#">Sports</a><hr>
-        <a href="#">Quotes</a><hr>
-        <a href="#">Music Bands</a><hr>
-        <a href="#">Famous Personalities</a><hr>
-        <a href="#">Superheroes</a><hr>
-        <a href="#">Miscellaneous</a><hr>
+            <div class="zindex">
+                <a href="#">TV Series</a><hr>
+                <a href="#">Vehicles</a><hr>
+                <a href="#">Anime</a><hr>
+                <a href="#">Gaming</a><hr>
+                <a href="#">Sports</a><hr>
+                <a href="#">Quotes</a><hr>
+                <a href="#">Music Bands</a><hr>
+                <a href="#">Famous Personalities</a><hr>
+                <a href="#">Superheroes</a><hr>
+                <a href="#">Miscellaneous</a><hr>
+            </div>
         </div>
     </div>
     <!-- Carousel Start -->
@@ -387,8 +395,8 @@ padding:0px 0px 10px 0px;
                 <div class="col s12" id="trending_posters">
                     <div class="col s6 m3" id="poster">
                         <div class="card">
-                            <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/poster1.jpg">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                            <img class="activator" src="img/poster1.jpg" >
                             </div>
                             <div class="card-content">
                             <span class="card-title activator" id="card-title">Sparked Captain America<i class="material-icons right" style="display:inline;">more_vert</i></span>
@@ -404,7 +412,7 @@ padding:0px 0px 10px 0px;
                         </div>
                     </div>
                     <div class="col s6 m3" id="poster">
-                        <div class="card">
+                        <div class="card" >
                             <div class="card-image waves-effect waves-block waves-light">
                             <img class="activator" src="img/poster2.jpg">
                             </div>
