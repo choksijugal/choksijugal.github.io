@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+        <link type="text/css" rel="stylesheet" href="css\materialize.min.css">
+	    <link type="text/css" rel="stylesheet" href="css\materialize.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+<style>
+  @keyframes backgroundscroller {
+  from {
+    background-position: 0% 0%;    
+  }
+  to {    background-position: 500% 500%, 400% 400%, 300% 300%, 200% 200%, 100% 100%;    
+  }
+}
+
+  body
+			{
+				color: #eee;
+				background-color: rgba(5,5,5,0.9);
+				background-image: url('img/bg.png');
+	font-family: 'Montserrat', sans-serif;
+		 animation-name: backgroundscroller;
+  animation-duration: 420s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal; 
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  bottom: 0px;
+			}
+button.accordion {
+    background-color: rgb(22,22,22);
+    color: #eee;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+    font-family: 'Montserrat', sans-serif;
+    margin: 15px 0px 0px 0px;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #000;
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
+    border-color: #3fc3ff;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: rgb(22,22,22);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+#wrappr{
+     margin: 40px;
+ }
+ #items_box {
+             background: rgb(40,40,40);
+             padding:0px 15px 0px 15px;
+             margin-right: 10px;
+         }
+#cart_head {
+             width:100%;
+             color:#fff;
+             font-family: Garamond;
+             font-size: 32px;
+             padding: 8px 0px 4px 10px;
+             border-width:0px 0px 1px 0px;
+             border-style: solid;
+             border-color:#000;
+             margin-bottom:0px;
+         }
+p {
+  margin: 5px;
+}
+#login button{
+  background: #3fc3ff;
+  text-transform: none;
+  font-size: 14px;
+  height:45px;
+}
+input#qty3, input#qty2, input#qty1 {
+  text-align: center;
+  background: #fff;
+  border: none;
+  border: 1px solid #fff;
+  margin: 10px 0px 10px 0px;
+  width: 30px;
+  height: 20px;
+  color:#000;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.value-button {
+  display: inline-block;
+  border: none;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  vertical-align: top;
+  background:none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.value-button:hover {
+  cursor: pointer;
+}
+#increase {
+    text-align: right;
+    padding-left:0px;
+    margin-top: -2px;
+}
+#decrease {
+    text-align: left;
+    padding-right:12px;
+    margin-top: -2px;
+}
+.qty {
+             width:100%;
+             text-align: center;
+         }
+        #margin {
+          
+             padding: -5px;
+        }
+         .img {
+             padding:0px;
+         }
+         .poster_title {
+             padding-top: 0px;
+             font-family: 'Garamond', serif;
+             font-size: 28px;
+         }
+         .poster_details {
+             padding-top: 12px;
+
+         }
+         #artist {
+             font-size: 16px;
+             padding-top: 0px;
+             line-height: 22px;
+         }
+         #cost {
+             line-height: 50px;
+             font-size: 28px;
+             float:right;
+             font-family: 'Garamond', serif;
+         }
+         #mrp {
+             font-size: 12px;
+             display: inline;
+             text-decoration: line-through;
+         }
+         tr#border{
+            border-width:0px 0px 1px 0px;
+             border-style: solid;
+             border-color:#3fc3ff;
+         }
+         #summary {
+               position:fixed;
+             margin-left:64%;
+             background: rgb(40,40,40);
+         }
+         .summary_head {
+             width:100%;
+             font-size: 28px;
+             font-family: 'Garamond', serif;
+             padding: 10px 0px 6px 12px;
+             border-width:0px 0px 1px 0px;
+             border-style: solid;
+             border-color:#000;
+         }
+         .summary_price table{
+             font-size: 16px;
+         }
+         .summary_price {
+             border-style: solid;
+             border-width: 0px 0px 1px 0px;
+             border-color:#000;
+         }
+         #green {
+             color:green;
+         }
+         .total table{
+             font-size: 18px;
+             font-weight: bold;
+         }
+</style>
+</head>
+<body>
+<div class="row" id="wrappr" style="margin-top:40px;">                 
+  <div class="col s12 m12 l7 offset-l1" id="items_box">
+    <div class="col row" id="cart_head">
+       Checkout
+    </div>
+    <div class="content">
+      <button class="accordion">1. Login</button>
+      <div class="panel" >
+        <div id="login">
+          <table>
+            <tr>
+              <td width="67%">
+        <p>Name : <b>Yash Tamrakar</b></p>
+        <p>Email: <b>abcd@gmail.com</b></p>
+        <p><a href="#">Login into another account</a></p>
+              </td width="33%">
+              <td>
+                <button class="btn waves-effect waves-light" id="continue" type="submit" name="action">Continue Checkout
+								</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <button class="accordion">2. Address</button>
+      <div class="panel">
+        <div id="login">
+          <table>
+            <tr>
+              <td width="67%">
+       <form>
+         <div class="input-field col s12 l6">
+				  <input id="name" type="text" class="validate"  placeholder="Name">
+        </div>
+        <div class="input-field col s12 l6">
+				  <input id="number" type="text" class="validate" placeholder="Phone Number">
+        </div>
+        <div class="input-field col s12 l12">
+				  <input id="address1" type="text" class="validate" placeholder="Address Line 1">
+        </div>
+       <div class="input-field col s12 l12">
+				  <input id="address2" type="text" class="validate" placeholder="Address Line 2">
+        </div>
+        <div class="input-field col s12 l6">
+				  <input id="city" type="text" class="validate" placeholder="City">
+        </div>
+        <div class="input-field col s12 l6">
+				  <input id="pin" type="text" class="validate" placeholder="Pincode">
+        </div>
+         </form>
+              </td width="33%">
+              <td>
+                <button class="btn waves-effect waves-light" id="continue" type="submit" name="action">Continue Checkout
+								</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <button class="accordion">3. Order Summary</button>
+      <div class="panel">
+        <div class="col s12 item row"> 
+                            <div class="row"></div>
+                            <div class="col s4 m4 l2" id="margin">
+                                <img class="responsive-img img" src="img\poster1.jpg">
+                                <div class="qty">
+                                    <form id="num">
+                                        <div class="value-button" id="decrease" onclick="decreaseValue3()" value="Decrease Value">-</div>
+                                        <input type="number" id="qty3" value="1" />
+                                        <div class="value-button" id="increase" onclick="increaseValue3()" value="Increase Value">+</div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col s8 m8 l10" id="poster_table">
+                                <table style="width:100%;">
+                                    <tr id="border">
+                                        <td align="left" class="poster_title">
+                                    Captain America Large
+                                         </td>
+                                         <td style="text-align:right;">
+                                             Deliver by Wednesday, 10th July
+                                         </td>
+                                    </tr>
+                                    <tr class="poster_details" id="artist">
+                                    <td><div id="artist">
+                                        Artist:<a href="#">&nbsp;Yash Tamrakar</a><br>
+                                        Textured Print <br>
+                                        Wooden Frame
+                                        </div>
+                                    </td>
+                                    <td style="text-align:right;">
+                                        <div id="remove"><a href="#">Remove</a></div>
+                                        <div style="display:block;" id="cost">
+                                             Cost: &#8377;150
+                                        </div>
+                                    </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>  
+            <div class="col s12 item row"> 
+                            <div class="row"></div>
+                            <div class="col s4 m4 l2" id="margin">
+                                <img class="responsive-img img" src="img\poster1.jpg">
+                                <div class="qty">
+                                    <form id="num">
+                                        <div class="value-button" id="decrease" onclick="decreaseValue2()" value="Decrease Value">-</div>
+                                        <input type="number" id="qty2" value="1" />
+                                        <div class="value-button" id="increase" onclick="increaseValue2()" value="Increase Value">+</div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col s8 m8 l10" id="poster_table">
+                                <table style="width:100%;">
+                                    <tr id="border">
+                                        <td align="left" class="poster_title">
+                                    Captain America Large
+                                         </td>
+                                         <td style="text-align:right;">
+                                             Deliver by Wednesday, 10th July
+                                         </td>
+                                    </tr>
+                                    <tr class="poster_details" id="artist">
+                                    <td><div id="artist">
+                                        Artist:<a href="#">&nbsp;Yash Tamrakar</a><br>
+                                        Textured Print <br>
+                                        Wooden Frame
+                                        </div>
+                                    </td>
+                                    <td style="text-align:right;">
+                                        <div id="remove"><a href="#">Remove</a></div>
+                                        <div style="display:block;" id="cost">
+                                             Cost: &#8377;150
+                                        </div>
+                                    </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>                              
+      </div>
+
+      <button class="accordion">4. Payment</button>
+      <div class="panel">
+        <div class="row"></div>
+       <form action="#">
+    <p>
+      <input class="with-gap" name="payment" type="radio" id="card" />
+      <label for="card">Credit/Debit/ATM Card</label>
+    </p>
+    <p>
+      <input class="with-gap" name="payment" type="radio" id="cod" />
+      <label for="cod">Cash On Delivery</label>
+    </p>
+    <p>
+      <input class="with-gap" name="payment" type="radio" id="paytm"  />
+      <label for="paytm">Paytm</label>
+    </p>
+  </form>
+  <div class="row"></div>
+      </div>
+      <div class="row"></div>
+    </div>
+  </div>
+  <div class="col s12 m12 l3 summary" id="summary" >
+                        <div class="summary_head">
+                            Order Summary
+                        </div>
+                        <div class="summary_price col s12">
+                            <table>
+                                <tr>
+                                    <td>
+                                        Price (4 Items) 
+                                    </td>
+                                    <td align="right">
+                                        &#8377;570
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td>
+                                        Delivery Charges
+                                    </td>
+                                    <td id="green">
+                                        FREE
+                                    </td>
+                                </tr>   
+                            </table>
+                        </div>
+                        <div class="total col s12">
+                            <table>
+                                <tr>
+                                    <td>
+                                        Amount Payable
+                                    </td>
+                                    <td align="right">
+                                        &#8377;570
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                </div>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+<script>
+    function increaseValue3() {
+  var value = parseInt(document.getElementById('qty3').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById('qty3').value = value;
+}
+
+function decreaseValue3() {
+  var value = parseInt(document.getElementById('qty3').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value < 1 ? value = 1 : '';
+  value--;
+  document.getElementById('qty3').value = value;
+}
+</script>
+<script>
+    function increaseValue2() {
+  var value = parseInt(document.getElementById('qty2').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById('qty2').value = value;
+}
+
+function decreaseValue2() {
+  var value = parseInt(document.getElementById('qty2').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value < 1 ? value = 1 : '';
+  value--;
+  document.getElementById('qty2').value = value;
+}
+</script> 
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/materialize.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</body>
+</html>
