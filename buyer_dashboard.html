@@ -1,0 +1,426 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="css\materialize.min.css">
+	    <link type="text/css" rel="stylesheet" href="css\materialize.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+         @keyframes backgroundscroller {
+  from {
+    background-position: 0% 0%;    
+  }
+  to {    background-position: 500% 500%, 400% 400%, 300% 300%, 200% 200%, 100% 100%;    
+  }
+}
+
+  body
+			{
+				color: #eee;
+				background-color: rgba(5,5,5,0.9);
+				background-image: url('img/bg.png');
+	font-family: 'Montserrat', sans-serif;
+		 animation-name: backgroundscroller;
+  animation-duration: 420s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal; 
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  bottom: 0px;
+			}
+
+         #items_box1, #items_box2 {
+             background: rgba(5,5,5,0.5);
+             padding:15px 15px 15px 15px;
+             margin-right: 10px;
+         }
+         .img {
+             padding:0px;
+         }
+         .img1 {
+             padding: 10px;
+             display: inline;
+         }
+         .poster_title {
+             padding-top: 0px;
+             font-family: 'Garamond', serif;
+             font-size: 28px;
+         }
+         .poster_details {
+             padding-top: 12px;
+
+         }
+         #artist {
+             font-size: 16px;
+             padding-top: 0px;
+             line-height: 26px;
+         }
+         #cost {
+             line-height: 50px;
+             font-size: 28px;
+             float:right;
+             font-family: 'Garamond', serif;
+         }
+         #mrp {
+             font-size: 12px;
+             display: inline;
+             text-decoration: line-through;
+         }
+         .remove {
+             padding-top: 8px;
+             font-size: 16px;
+         }
+        .item {
+             background: none;
+             color:white;
+             margin-bottom:15px;
+
+         }
+         #summary {
+             background: rgba(5,5,5,0.5);
+             height: 300px;
+         }
+         .total table{
+             font-size: 18px;
+             font-weight: bold;
+         }
+         tr#border{
+            border-width:0px 0px 1px 0px;
+             border-style: solid;
+             border-color:#3fc3ff;
+         }
+        #poster_table td {
+             margin:0px;
+             padding:5px;
+         }
+         a {
+             color:#3fc3ff;
+         }
+         #remove {
+             padding-top:10px;
+         }
+         .value-button {
+  display: inline-block;
+  border: none;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  vertical-align: top;
+  background:none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#increase {
+    text-align: right;
+    padding-left:12px;
+    margin-top: -2px;
+}
+#decrease {
+    text-align: left;
+    padding-right:12px;
+    margin-top: -2px;
+}
+form#num {
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 0px;
+  align:center;
+}
+.value-button:hover {
+  cursor: pointer;
+}
+
+form #decrease {
+  margin-right: -4px;
+  border-radius: 8px 0 0 8px;
+}
+
+form #increase {
+  margin-left: -4px;
+  border-radius: 0 8px 8px 0;
+}
+
+form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+
+input#qty3, input#qty2, input#qty1 {
+  text-align: center;
+  background: #fff;
+  border: none;
+  border: 1px solid #fff;
+  margin: 10px 0px 10px 0px;
+  width: 40px;
+  height: 20px;
+  color:#000;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#tabs {
+    color: #fff !important;
+    background: none;
+}
+.tabs .tab a:hover, .tabs .tab a.active, .tabs .tab a  {
+    text-transform: none;
+    color: #fff !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+.tabs .indicator {
+    background-color: #3fc3ff;
+}
+#card-title {
+          font-size: 16px;
+          margin:0px;
+          line-height: 20px;
+          padding: 0px;
+          display:inline;
+          align: left;
+          font-family: 'Montserrat', sans-serif;
+
+          color: #eee;
+      }
+      .card .card-content {
+          padding: 4px 0px 4px 4px;
+          background: #000;
+          color: #eee;
+      }
+      .card {
+          margin:20px 15px 20px 15px;
+      }
+      .card:hover {
+          border-style: solid;
+          border-width: 0px 0px 2px 0px;
+          border-color: #3fc3ff;
+          margin:20px 15px 18px 15px;
+          cursor: pointer;
+      }
+    #poster {
+          float : center;
+          border-style: solid;
+          border-style: none;
+      }
+      #mode button, #summary button{
+          background: #3fc3ff;
+          text-transform: none;
+          height: 40px;
+      }
+         @media only screen and (max-width: 992px) {
+ #wrappr{
+     margin: 40px;
+ }
+ #summary {
+     position:relative;
+     margin:auto;
+     display: block;
+     z-index: -1;
+ }
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="row" id="wrappr" style="margin-top:40px;">
+                  <form action="#" method="POST">    
+                      <div class="col s12 m12 l7 offset-l1">
+                        <div class="col s12">
+                        <ul class="tabs tabs-swipe-demo" id="tabs">
+                            <li class="tab col s3"><a href="#items_box1">My Orders</a></li>
+                            <li class="tab col s3"><a href="#items_box2">My Wishlist</a></li>
+                        </ul>
+                        </div>      
+                    </div> 
+                    <div class="col s12 m12 l3 center" id="mode">
+                         <button class="btn waves-effect waves-light" id="continue" type="" name="action">Switch to Seller Mode
+								</button> 
+                    </div>               
+                     <div class="col s12 m12 l7 offset-l1" id="items_box1">
+                        <div class="col s12 item row"> 
+                            <div class="row"></div>
+                            <div class="col s4 m4 l2">
+                                <img class="responsive-img img" src="img\poster1.jpg">
+                            </div>
+                            <div class="col s8 m8 l10" id="poster_table">
+                                <table style="width:100%;">
+                                    <tr id="border">
+                                        <td align="left" class="poster_title">
+                                    Captain America
+                                         </td>
+                                         <td style="text-align:right;">
+                                             Amount Paid: &#8377;150
+                                         </td>
+                                    </tr>
+                                    <tr class="poster_details" id="artist">
+                                    <td><div id="artist">
+                                        Order ID: XYZ123456<br>
+                                        Ordered on: 30th June, 2017<br />
+                                        Delivered on: 5th July, 2017
+                                        </div>
+                                    </td>
+                                    <td style="text-align:right;">
+                                        Artist:<a href="#">&nbsp;Yash Tamrakar</a> <br /><br />
+                                        <a href="#">View Details</a>
+                                    </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="col s12 item row"> 
+                            <div class="row"></div>
+                            <div class="col s4 m4 l2">
+                                <img class="responsive-img img" src="img\poster2.jpg">
+                            </div>
+                            <div class="col s8 m8 l10" id="poster_table">
+                                <table style="width:100%;">
+                                    <tr id="border">
+                                        <td align="left" class="poster_title">
+                                    Captain America
+                                         </td>
+                                         <td style="text-align:right;">
+                                             Amount Paid: &#8377;150
+                                         </td>
+                                    </tr>
+                                    <tr class="poster_details" id="artist">
+                                    <td><div id="artist">
+                                        Order ID: XYZ123456<br>
+                                        Ordered on: 30th June, 2017<br />
+                                        Delivered on: 5th July, 2017
+                                        </div>
+                                    </td>
+                                    <td style="text-align:right;">
+                                        Artist:<a href="#">&nbsp;Yash Tamrakar</a> <br /><br />
+                                        <a href="#">View Details</a>
+                                    </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="col s12 item row"> 
+                            <div class="row"></div>
+                            <div class="col s4 m4 l2">
+                                <img class="responsive-img img" src="img\poster1.jpg">
+                           </div>
+                            <div class="col s8 m8 l10" id="poster_table">
+                                <table style="width:100%;">
+                                    <tr id="border">
+                                        <td align="left" class="poster_title">
+                                    Captain America
+                                         </td>
+                                         <td style="text-align:right;">
+                                             Amount Paid: &#8377;150
+                                         </td>
+                                    </tr>
+                                    <tr class="poster_details" id="artist">
+                                    <td><div id="artist">
+                                        Order ID: XYZ123456<br>
+                                        Ordered on: 30th June, 2017<br />
+                                        Delivered on: 5th July, 2017
+                                        </div>
+                                    </td>
+                                    <td style="text-align:right;">
+                                        Artist:<a href="#">&nbsp;Yash Tamrakar</a> <br /><br />
+                                        <a href="#">View Details</a>
+                                    </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>                      
+
+                </div>
+                <div class="col s12 m12 l7 offset-l1" id="items_box2">
+                    <div class="col s6 m3" id="poster">
+                        <a href="#">
+                            <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                            <img class="activator" src="img/poster1.jpg" >
+                            </div>                            
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col s6 m3" id="poster">
+                        <a href="#">
+                            <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                            <img class="activator" src="img/poster1.jpg" >
+                            </div>                            
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col s6 m3" id="poster">
+                        <a href="#">
+                            <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                            <img class="activator" src="img/poster1.jpg" >
+                            </div>                            
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col s6 m3" id="poster">
+                        <a href="#">
+                            <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                            <img class="activator" src="img/poster1.jpg" >
+                            </div>                            
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col s6 m3" id="poster">
+                        <a href="#">
+                            <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                            <img class="activator" src="img/poster1.jpg" >
+                            </div>                            
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col s6 m3" id="poster">
+                        <a href="#">
+                            <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                            <img class="activator" src="img/poster1.jpg" >
+                            </div>                            
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col s6 m3" id="poster">
+                        <a href="#">
+                            <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                            <img class="activator" style="opacity: 0.6;" src="img/add.jpg" >
+                            </div>                            
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="col s12 m12 l3 summary center" id="summary">
+                 <button class="btn waves-effect waves-light" id="continue" type="" name="action" style="margin-top:240px;">Request a Custom Order
+								</button>
+                </div>
+                 
+         </form>
+     </div> 
+              <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> 
+      <script>
+$('#tabs-swipe-demo').tabs({ 'swipeable': true });
+</script>
+    </body>
+</html>
+    
