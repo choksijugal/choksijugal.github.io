@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <style>
+            
             @keyframes backgroundscroller {
   from {
     background-position: 0% 0%;    
@@ -17,11 +18,12 @@
 
   body
 			{
-				background-color: #fff;
-				background-image: url('img/bg1.png');
-	font-family:"Montserrat", sans-serif;
+				color: #eee;
+				background-color: rgba(5,5,5,0.9);
+				background-image: url('img/bg.png');
+	font-family: 'Montserrat', sans-serif;
 		 animation-name: backgroundscroller;
-  animation-duration: 680s;
+  animation-duration: 420s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: normal; 
@@ -33,6 +35,8 @@
         #frame_container {
             font-family: "Garamond", serif;
             font-size: 24px;
+            background-color: rgb(22,22,22);
+            padding:10px;
         }
         #frame, #paper {
             background: #ddd;
@@ -63,15 +67,16 @@
     border-style: solid;
     border-width: 0px 0px 1px 0px;
     padding:0px;
+    border-color: #3fc3ff;
 }
 #poster_description {
-    padding:0px;
+    padding-bottom: 0px;
     padding-top:15px;
-    height: 110px;
     border-style: none;
 }
 #rating {
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0px 10px auto;
+    margin-bottom: 10px;
     font-size: 18px;
 }
 .stars {
@@ -79,7 +84,7 @@
     display: inline
 }
 #delivery {
-    padding:10px 0px 5px 0px;
+    padding:10px 0px 5px auto;
 }
 #delivery button {
     width:10%;
@@ -106,6 +111,7 @@
     height: 45px;
     font-size:14px;
     text-transform: none;
+    border-radius: 0px;
 }
 #buttons2 button {
     background:#3fc3ff;
@@ -113,6 +119,7 @@
     height: 45px;
     font-size:14px;
     text-transform: none;
+    border-radius: 0px;
 }
 #delivery input {
     height:40px;
@@ -137,6 +144,7 @@
     display:inline;
     box-shadow: none;
     background: #3fc3ff;
+    border-radius: 0px;
 }
 
 html {
@@ -151,11 +159,12 @@ html {
 /*::-webkit-scrollbar-thumb {
     background: #FF0000;
 }*/
-
-#wrapper{
+div#wrapper{
   max-width:100%;
   padding:0px;
   position:relative;
+    background-color: rgb(22,22,22);
+    margin-top: 10px;
 }
 
 button:focus {outline:0 !important;}
@@ -163,12 +172,12 @@ button:focus {outline:0 !important;}
 .left-controls{
   
   position:absolute;
-  top:0;
+  top:70px;
   left:0;
-  width:4%;
-  height:330px;
-  z-index:40;
-  background:rgba(255,255,255,0.8);
+  width:2%;
+  height:150px;
+  z-index:400;
+  background:rgba(0,0,0,0.8);
   opacity:1;
   cursor:pointer;
   text-align:center;
@@ -179,44 +188,20 @@ button:focus {outline:0 !important;}
   display: moz box;
   display:ms flexbox;
   display:flex;
-  color:#fff;
-
-}
-
-.fa-chevron-left-extra
-{
-  align-self:center;
-  position:relative;
-  height:auto;
-  top:0px;
-  transform-origin: 55% 50%;
-  font-style:normal;
-  font-weight:400;
-  line-height:1;
-  font-variant:normal;
-  text-transform:none;
-  font-size:2.5vw;
-  transition:transform .1s ease-out 0s;
-  transition-property: transform;
-  transition-duration: 0.1s;
-  transition-timing-function: ease-out;
-  transition-delay: 0s;
-  color:#bbbbbb;
-  opacity:1;
 }
 
 
 .right-controls{
   position:absolute;
-  top:0;
+  top:70px;
   right:0;
-  width:4%;
-  height:330px;
-  z-index:40;
-  background:rgba(255,255,255,0.8);
+  width:2%;
+  height:150px;
+  z-index:400;
+  background:rgba(0,0,0,0.8);
   opacity:1;
   cursor:pointer;
-  text-align:center;
+  text-align:right;
   webkit justify content: center;
   justify-content:center;
   display: webkit box;
@@ -225,28 +210,6 @@ button:focus {outline:0 !important;}
   display:ms flexbox;
   display:flex;
   color:#fff;
-}
-
-.fa-chevron-right-extra
-{
-  align-self:center;
-  position:relative;
-  height:auto;
-  top:0px;
- transform-origin: 55% 50%;
-  font-style:normal;
-  font-weight:400;
-  line-height:1;
-  font-variant:normal;
-  text-transform:none;
-  font-size:2.5vw;
-  transition:transform .1s ease-out 0s;
-  transition-property: transform;
-  transition-duration: 0.1s;
-  transition-timing-function: ease-out;
-  transition-delay: 0s;
-  color:#bbbbbb;
-  opacity:1;
 }
 
 .title{
@@ -257,17 +220,71 @@ button:focus {outline:0 !important;}
   max-width: 100%;
   overflow: hidden;
   overflow-x:scroll;
-  border-left:1px solid #fff;
-  border-right:1px solid #fff;
-  
+  border-left:0px solid #fff;
+  border-right:0px solid #fff;
+  height: 290px;
 }
 
 ul{
 width:600em;
 list-style-type:none;
 padding:0px 0px 10px 0px;
+z-index: 0;
 }
 
+#contnt{
+  position:relative;
+}
+
+
+#wrapper .card{
+  width: 192px;
+  height:240px;
+  background:#fff;
+  float:left;
+  margin-right:50px;
+  margin-bottom:10px;
+  cursor:pointer;
+  transform: scale(1);
+  visibility:visible;
+  margin-top: 20px;
+  -moz-box-shadow: 0px 1px 5px 0px #676767;
+  -webkit-box-shadow: 0px 1px 5px 0px #676767;
+  box-shadow: 0px 1px 5px 0px #676767;
+  
+}
+
+#wrapper .card:hover{
+  cursor:pointer;
+  transform: scale(1);
+  visibility:visible;
+  transition: all .2s ease-in-out;
+  transform: scale(1.1); 
+  z-index:100;
+  position:relative;
+  border-style: solid;
+  border-color:#3fc3ff;
+  border-width: 2px;
+  transition-timing-function:cubic-bezier(0.5, 0, 0.1, 1);
+  transition-duration:400ms;  
+}
+
+ div.inside-top{
+  width:100%;
+  height:240px;
+  background:#555;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:100;
+}
+
+
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
 #content{
   position:relative;
 }
@@ -323,38 +340,38 @@ padding:0px 0px 10px 0px;
 
 #comments_head {
     font-size: 24px;
-    font-family: Garamond, serif;
     
 }
-table {
-    background: rgba(220,220,220,0.5);
+#table {
+    background: rgb(40,40,40);
     width:75%;
-    border-radius:4px;
+    border-radius:0px;
     margin: 10px 0px 40px 0px;
+    padding-bottom: 60px;
 }
 #comments_own {
-    font-family: Garamond, serif;
-    font-size: 20px;
+    font-size: 18px;
     padding:10px 0px 5px 15px;
     border-style:solid;
     border-width: 0px 0px 1px 0px;
     font-weight: bold;
+    border-color: #3fc3ff;
+    margin: 0px 10px 0px 10px;
 }
 
 #comment {
-    margin: 0px;
-    padding: 10px 0px 10px 20px;
+    padding: 10px 0px 10px 25px;
 }
 textarea {
     background: white;
     resize: none;
-    border-radius: 6px 6px 0px 6px;
+    border-radius: 0px;
     height:75px;
 }
 #comment_button {
     background: #3fc3ff;
     height: 45px;
-    border-radius: 0px 0px 6px 0px;
+    border-radius: 0px;
     margin:0px;
     float:right;
 }
@@ -362,7 +379,7 @@ textarea {
     background: #eee;
     color:#000;
     height: 45px;
-    border-radius: 0px 0px 0px 6px;
+    border-radius: 0px;
     margin-left:-5px;
     float:right;
 }
@@ -380,15 +397,16 @@ textarea {
  table {
      width:100%;
  }
- textarea {
-     width:100%;
+ #textarea {
+     width:90%;
+     float: center;
  }
 }
 * {margin: 0; padding: 0;}
 .magnify {margin: 0px auto; position: relative;}
 
 .large {
-	width: 150%; height: 150%;
+	width: 150%; height: 100%;
 	position: absolute;
 	border-radius: 0%;
         cursor: zoom-in;
@@ -407,13 +425,12 @@ input#pin_code:focus, input#pin_code::after {
     border-color: #3fc3ff;
 }
 
-
 </style>
 
     </head>
 
     <body>
-        <div class="wrappr" style="margin:40px 0px 40px 0px;padding: 0% 4% 0% 4%;">
+        <div class="wrappr" style="margin:40px 0px 0px 0px;padding: 0% 4% 0% 4%;">
             <div class="row" style="margin-bottom:0px;">
             <div class="col s12 l4" id="frame_container">
                 <div class="col s12" id="frame_head">
@@ -516,14 +533,17 @@ input#pin_code:focus, input#pin_code::after {
                 </div>
             </div>
            
-            <div class="col s10 l4 offset-s1">
+            <div class="col s10 l4 offset-s1" style="background: rgb(22,22,22);padding:5px 10px 30px 10px">
                 <div class="col s12" id="poster_title">
                     <h4>Sparked Captain America</h4>
                 </div>
                 <div class="col s12" id="poster_description">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                </div>
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</div>
+                    <div class="row"></div>
+                <div class="col s12">
+                   <b> Category: <a href="#" id="artist">Cars</a></b><br>
+                   </div>
                 <div class="col s12" id= "rating">
                     <div class="row"></div>
                     <div class="stars">
@@ -549,15 +569,15 @@ input#pin_code:focus, input#pin_code::after {
                     </div>
                 </div>
                 <div class="col s12">
-                    Artist: <a href="#" id="artist"><b>Yash Tamrakar</b></a><br>
-                    Tags: <a href="#" id="artist"><b>#captain_america </b></a> <a href="#" id="artist"><b>#avengers </b></a>
+                   <b> Artist: <a href="#" id="artist">Yash Tamrakar</a></b><br>
+                    <b>Tags: <a href="#" id="artist">#captain_america </a> </b><a href="#" id="artist"><b>#avengers </b></a>
                     <a href="#" id="artist"><b>#superhero</b></a> <a href="#" id="artist"><b>marvel</b></a>
                 </div>
                 <div class="col s12" id="buttons">
-                    <div class="col s6" id="btn">
+                    <div class="col s6" id="btn1">
                     <button class="btn waves-effect waves-light col s6" id="checkout" type="submit" name="action">Request Customization
 							</button>
-                    </div><div class="col s6" id="btn">
+                    </div><div class="col s6" id="btn2">
                     <button class="btn waves-effect waves-light col s6" id="checkout" type="submit" name="action"><i class="fa fa-heart" style="font-size:12px;"></i>&nbsp;&nbsp;Add To Wishlist
 							</button>
                     </div>
@@ -580,31 +600,23 @@ input#pin_code:focus, input#pin_code::after {
             <div class="" id="comments_head">
                 Comments And Suggestions:
             </div>
-            <table>
-                <tr>
-                    <td id="comments_own">
+            <div class="col s7" id="table">
+                    <div class="col s12" id="comments_own">
                         Aakarsh Chopra | Student at IIT Madras
-                    </td>
-                </tr>
-                <tr>
-                    <td id="comment">
+                    </div>
+                    <div class="col s12" id="comment">
                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                     labore et dolore.
-                    </td>
-                </tr>
-
-                 <tr>
-                    <td id="comments_own">
+                    </div>
+                     <div class="col s12" id="comments_own">
                         Jugal Choksi | Student at IIT Madras
-                    </td>
-                </tr>
-                <tr>
-                    <td id="comment">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                    </td>
-                </tr>
-                    <tr>
-                    <td>
+                    </div>
+                    <div class="col s12" id="comment">
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore.
+                    </div>
+                    <div>
+                    <div class="col s12" id="textarea" style="">
                         <form>
                         <textarea placeholder="Type Your Comment Here"></textarea>
                         <button class="btn waves-effect waves-light col s6" style="" id="comment_button" type="submit" name="action"><i class="fa fa-paper-plane" style="font-size:16px;"></i>&nbsp;&nbsp;Post
@@ -612,21 +624,21 @@ input#pin_code:focus, input#pin_code::after {
                             <button class="btn waves-effect waves-light col s6" style="display:inline;" id="clear_button" type="reset" value="reset" name="action"><i class="fa fa-eraser" style="font-size:16px;"></i>&nbsp;&nbsp;Clear
 							</button>
                         </form>
-                </td>
-                </tr>
-                </table>
+                    </div>
+               </div>
+            </div>
         <div class="" id="comments_head" style="width:75%">
                 Similar Posters:
         </div>
-        <div id="wrapper" >
+    </div>
+        <div class="col s12" id="wrapper" >
   
-  <span id="controlL" class="left-controls" role="button" aria-label="See Previous Modules">
-    <b class="fa fa-chevron-left fa-chevron-left-extra" aria-hidden="true"></b>
+  <span id="controlL" class="left-controls" role="button" aria-label="See Previous Modules"><font color="white" style="margin-top:60px;" size="5"><i class="fa fa-chevron-left"></i></font>
   </span>
  
-  <div class="module-section clearfix">
+  <div class="module-section clearfix" style="background: transperant">
     <!-- <button class="btn arrow-guides fa-chevron-left"></button> -->
-   <ul id="content">
+   <ul id="contnt" style="background: transperant">
     
     <li class="card effect1">
       <div class="inside-top">
@@ -751,14 +763,11 @@ input#pin_code:focus, input#pin_code::after {
     
   </div>
   
-<span id="controlR" class="right-controls" role="button" aria-label="See Previous Modules">
-    <b class="fa fa-chevron-right fa-chevron-right-extra" aria-hidden="true"></b>
-  </span>
+<span id="controlR" class="right-controls" role="button" aria-label="See Previous Modules"><font color="white" style="margin-top:60px;" size="5"><i class="fa fa-chevron-right"></i></font>
   
   
 </div>
 
-    </div>
     <script>
     $(document).ready(function(){
 
@@ -803,19 +812,19 @@ input#pin_code:focus, input#pin_code::after {
 	})
 })
 </script>
-    <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
+        <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
 <script src="http://thecodeplayer.com/uploads/js/jquery-1.7.1.min.js" type="text/javascript"></script>
 <script>
     $('#controlR').click(function() {
       event.preventDefault();
-      $('#content').animate({
+      $('#contnt').animate({
         marginLeft: "-=400px"
       }, "fast");
    });
 
  $('#controlL').click(function() {
       event.preventDefault();
-      $('#content').animate({
+      $('#contnt').animate({
         marginLeft: "+=400px"
       }, "fast");
  });

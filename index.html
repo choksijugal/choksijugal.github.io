@@ -144,18 +144,34 @@ input {
 color:#000;
 }
 
-#login_button, #signup_button, #upload_button {
+#login_button {
+	height:40px;
+	background:#3fc3ff;
+	text-transform: none;
+	padding: auto;
+	margin-top: 10px;
+}
+#upload_button {
 	height:40px;
 	background:#3fc3ff;
 	text-transform: none;
 	padding: auto;
 }
+ #signup_button {
+	 height:40px;
+	background:#3fc3ff;
+	text-transform: none;
+	padding: auto;
+	margin-top: 10px;
+	margin-bottom: 15px;
+ }
 #upload-button {
 	margin
 }
 #login_form {
 	width:100%;
-	margin-left:10px; 
+	padding-right: 25px;
+	margin: 0px 0px 0px 10px; 
 	border-width: 0px 1px 0px 0px;
 	border-color: rgba(0,0,0,0.5);
 	border-style:solid;
@@ -201,12 +217,12 @@ table {
 							<div class="row">
 								<form action="#" method="post">
 									<div class="input-field col s12 l12">
-									<input id="username" type="text" class="">
+									<input id="username" type="text" >
 									<label for="username">Username</label>
 									</div>
 									
 									<div class="input-field col s12 l12">
-									<input id="password" type="password" class="">
+									<input id="password" type="password">
 									<label for="password">Password</label>
 									
 										<button class="btn waves-effect waves-light col s12 m10 l8 offset-m1 offset-l2" id="login_button" type="submit" name="action">Login
