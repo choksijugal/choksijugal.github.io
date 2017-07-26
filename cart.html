@@ -242,6 +242,16 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+#portrait {
+    width: 100%;
+    background: black;
+    padding: 0px 20px 0px 20px;
+}
+#landscape {
+    width: 100%;
+    background: black;
+    padding: 20px 0px 20px 0px;
+}
          @media only screen and (max-width: 992px) {
  #wrappr{
      margin: 40px;
@@ -265,7 +275,9 @@ input[type=number]::-webkit-outer-spin-button {
                         <div class="col s12 item row"> 
                             <div class="row"></div>
                             <div class="col s4 m4 l2">
-                                <img class="responsive-img img" src="img\poster1.jpg">
+                                <div id="portrait">
+                                 <img class="responsive-img img" src="img\poster1.png">
+                                </div>
                                 <div class="qty">
                                     <form id="num">
                                         <div class="value-button" id="decrease" onclick="decreaseValue1()" value="Decrease Value">-</div>
@@ -305,7 +317,9 @@ input[type=number]::-webkit-outer-spin-button {
                         <div class="col s12 item row"> 
                             <div class="row"></div>
                             <div class="col s4 m4 l2">
-                                <img class="responsive-img img" src="img\poster2.jpg">
+                                <div id="landscape">
+                                 <img class="responsive-img img" src="img\poster2.jpg">
+                                </div>
                                 <div class="qty">
                                     <form id="num">
                                         <div class="value-button" id="decrease" onclick="decreaseValue2()" value="Decrease Value">-</div>
@@ -345,7 +359,9 @@ input[type=number]::-webkit-outer-spin-button {
                         <div class="col s12 item row"> 
                             <div class="row"></div>
                             <div class="col s4 m4 l2">
-                                <img class="responsive-img img" src="img\poster1.jpg">
+                                <div id="portrait">
+                                 <img class="responsive-img img" src="img\poster1.png">
+                                </div>
                                 <div class="qty">
                                     <form id="num">
                                         <div class="value-button" id="decrease" onclick="decreaseValue3()" value="Decrease Value">-</div>

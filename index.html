@@ -122,16 +122,15 @@ padding:0px;
 margin:0px;
 }
 
-#share-buttons {
-	font-family: Garamond;
-	display: block;
-	overflow: wrap;
-	
-}
-
-#share-buttons img {
+#share-buttons img#fb {
 width: 72px;
-padding:0px 18px 0px 18px;
+padding:10px 18px 0px 18px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+#share-buttons img#thumb {
+padding:10% 30% 10% 30%;
 border: 0;
 box-shadow: 0;
 display: inline;
@@ -237,10 +236,9 @@ table {
 						<table>
 							<tr>
 								<td style="vertical-align:middle;text-align:center;">
-									<h5 style="color:black">Alternate Login via</h5> 
-									<a href="#" class="waves-effect waves-light"><img src="img\icon_fb.png"></a>
-									<a href="#" class="waves-effect waves-light"><img src="img\icon_google.png"></a>
-									<a href="#" class="waves-effect waves-light"><img src="img\icon_twitter.png">
+									<img src="img\thumb_login.jpg" class="col s12 img-responsive" id="thumb">
+									<h5 style="color:black;display:block">Social Account Login</h5> 
+									<a href="#" class="waves-effect waves-light"><img src="img\icon_fb.jpg" id="fb"></a>
 								</td>
 							</tr>
 						</table>
@@ -282,10 +280,8 @@ table {
 					
 					<div class="col s12 m12 l12 center-align row" id="share-buttons" style="margin-top:2px;">
 						<hr color="#3fc3ff" width="90%" size="2">
-						<h5 style="color:black">Alternate Login via</h5> 
-						<a href="#" class="waves-effect waves-light"><img src="img\icon_fb.png"></a>
-						<a href="#" class="waves-effect waves-light"><img src="img\icon_google.png"></a>
-						<a href="#" class="waves-effect waves-light"><img src="img\icon_twitter.png"></a>
+						<h5 style="color:black">Social Network Signup</h5> 
+						<a href="#" class="waves-effect waves-light"><img src="img\icon_fb.png" id="fb"></a>
 					</div>
 				</div>
 				<div class="row"></div>
