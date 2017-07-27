@@ -2,7 +2,7 @@
     <head>
         <link type="text/css" rel="stylesheet" href="css\materialize.min.css">
 	    <link type="text/css" rel="stylesheet" href="css\materialize.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
          @keyframes backgroundscroller {
@@ -28,8 +28,17 @@
   margin-bottom: 0px;
   bottom: 0px;
 			}
-
-         #items_box1, #items_box2 {
+#portrait {
+    width: 100%;
+    background: black;
+    padding: 0px 20px 0px 20px;
+}
+#landscape {
+    width: 100%;
+    background: black;
+    padding: 20px 0px 20px 0px;
+}
+          #items_box_cont {
              background: rgba(5,5,5,0.5);
              padding:15px 15px 15px 15px;
              margin-right: 10px;
@@ -229,29 +238,210 @@ input[type=number]::-webkit-outer-spin-button {
      z-index: -1;
  }
 }
-
+#profile_cont {
+    background-color: rgba(5,5,5,0.5);
+    padding: 20px;
+}
+#stats_title {
+    width: 100%;
+    font-size: 22px;
+    font-weight: 500;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #3fc3ff;
+}
+#items_box3 table tr td {
+    font-size: 20px;
+    padding:3px;
+}
+#items_box3 table {
+    width: 80%;
+    margin-left: 10%;
+}
+#items_box3 tr {
+    margin:0px;
+    padding: 0px;
+}
+#name {
+    font-family: 'Garamond', serif;
+}
+#label {
+    font-size: 18px;
+    padding-top: 24px;
+}
+#form {
+    margin: 0px auto 0px auto;
+    padding: 0px auto 0px auto;
+}
         </style>
     </head>
     <body>
         <div class="row" id="wrappr" style="margin-top:40px;">
-                  <form action="#" method="POST">    
-                      <div class="col s12 m12 l7 offset-l1">
+                  <form action="#" method="POST">   
+                    <div style="width:100%" >
+                      <div class="col s12 m12 l7 " style="padding-left: 80px">
                         <div class="col s12">
                         <ul class="tabs tabs-swipe-demo" id="tabs">
+                            <li class="tab col s3"><a href="#items_box3">My Profile</a></li>
                             <li class="tab col s3"><a href="#items_box1">My Orders</a></li>
                             <li class="tab col s3"><a href="#items_box2">My Wishlist</a></li>
                         </ul>
                         </div>      
+                      </div>
                     </div> 
-                    <div class="col s12 m12 l3 center" id="mode">
+                    <div class="col s12 m12 l4 center" id="mode">
                          <button class="btn waves-effect waves-light" id="continue" type="" name="action">Switch to Seller Mode
 								</button> 
-                    </div>               
-                     <div class="col s12 m12 l7 offset-l1" id="items_box1">
+                    </div>  
+                    <div class="col s10"></div>
+                  <div id="items_box3" style="padding:0px 80px 0px 80px">
+                      <div class="col s4">
+                        <div class="col s12" id="profile_cont">
+                            <div id="stats_title">
+                                User Statistics
+                            </div>
+                            <div class="row"></div>
+                            <img src="img/thumb_login.jpg" class="img img-responsive col s6 offset-s3">
+                        
+                        <div class="row"></div>
+                        <table cellpadding="0">
+                            <tr>
+                                <td>
+                                    Total Orders:
+                                </td>
+                                <td>
+                                    6
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>
+                                    Total Uploads:
+                                </td>
+                                <td>
+                                    6
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>
+                                    Total Likes:
+                                </td>
+                                <td>
+                                    6
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Posters Sold:
+                                </td>
+                                <td>
+                                    6
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="row"></div>
+                        <div class="row"></div>
+                        <div class="row"></div>
+                        </div>
+                      </div>
+                      
+                      <div class="col s4">
+                        <div class="col s12" id="profile_cont">
+                            <img src="img/thumb_login.jpg" class="img img-responsive col s10 offset-s1">
+                            <div id="name" class="col s12 center">
+                                <h4>Yash Tamrakar</h4>
+                            </div>
+                            <div class="center" id="nick"><h5>(Selfie)</h5></div>
+                        </div>
+                      </div>
+                    
+                      <div class="col s4">
+                        <div class="col s12" id="profile_cont">
+                            <div id="stats_title">
+                                Personal Details
+                            </div>
+                            <div class="col s12">
+                                <div class="col s4" id="label">
+                                    Name
+                                </div>
+                                <div class="col s8">
+                                    <input id="email" type="email" class="validate" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col s12" id="form">
+                                <div class="col s4" id="label">
+                                    User Name
+                                </div>
+                                <div class="col s8">
+                                    <input id="email" type="email" class="validate" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col s12" id="form">
+                                <div class="col s4" id="label">
+                                    Email ID
+                                </div>
+                                <div class="col s8">
+                                    <input id="email" type="email" class="validate" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col s12" id="form">
+                                <div class="col s4" id="label">
+                                    Phone
+                                </div>
+                                <div class="col s8">
+                                    <input id="email" type="email" class="validate" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col s12" id="form">
+                                <div class="col s4" id="label">
+                                    Address
+                                </div>
+                                <div class="col s8">
+                                    <input id="email" type="email" class="validate" placeholder="Line 1">
+                                </div>
+                            </div>
+                            <div class="col s12" id="form">
+                                <div class="col s4" id="label">
+                                    
+                                </div>
+                                <div class="col s8">
+                                    <input id="email" type="email" class="validate" placeholder="Line 2">
+                                </div>
+                            </div>
+                            <div class="col s12" id="form">
+                                <div class="col s4" id="label">
+                                    
+                                </div>
+                                <div class="col s8">
+                                    <input id="email" type="email" class="validate" placeholder="Line 3">
+                                </div>
+                            </div>
+                            <div class="col s12" id="form">
+                                <div class="col s4" id="label">
+                                    City
+                                </div>
+                                <div class="col s8">
+                                    <input id="email" type="email" class="validate" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col s12" id="form">
+                                <div class="col s4" id="label">
+                                    Pincode
+                                </div>
+                                <div class="col s8">
+                                    <input id="email" type="email" class="validate" placeholder="">
+                                </div>
+                            </div>
+                      </div>
+                    </div>
+                 </div>
+                  <div id="items_box1">
+                     <div class="col s12 m12 l7 offset-l1" id="items_box_cont">
                         <div class="col s12 item row"> 
                             <div class="row"></div>
                             <div class="col s4 m4 l2">
-                                <img class="responsive-img img" src="img\poster1.jpg">
+                                <div id="portrait">
+                                 <img class="responsive-img img" src="img\poster1.png">
+                                </div>
                             </div>
                             <div class="col s8 m8 l10" id="poster_table">
                                 <table style="width:100%;">
@@ -282,7 +472,9 @@ input[type=number]::-webkit-outer-spin-button {
                         <div class="col s12 item row"> 
                             <div class="row"></div>
                             <div class="col s4 m4 l2">
-                                <img class="responsive-img img" src="img\poster2.jpg">
+                                <div id="landscape">
+                                 <img class="responsive-img img" src="img\poster2.jpg">
+                                </div>
                             </div>
                             <div class="col s8 m8 l10" id="poster_table">
                                 <table style="width:100%;">
@@ -313,7 +505,9 @@ input[type=number]::-webkit-outer-spin-button {
                         <div class="col s12 item row"> 
                             <div class="row"></div>
                             <div class="col s4 m4 l2">
-                                <img class="responsive-img img" src="img\poster1.jpg">
+                                <div id="portrait">
+                                 <img class="responsive-img img" src="img\poster1.png">
+                                </div>
                            </div>
                             <div class="col s8 m8 l10" id="poster_table">
                                 <table style="width:100%;">
@@ -342,7 +536,13 @@ input[type=number]::-webkit-outer-spin-button {
                         </div>                      
 
                 </div>
-                <div class="col s12 m12 l7 offset-l1" id="items_box2">
+                <div class="col s12 m12 l3 summary center" id="summary">
+                 <button class="btn waves-effect waves-light" id="continue" type="" name="action" style="margin-top:240px;">Request a Custom Order
+								</button>
+                </div>
+              </div>
+              <div id="items_box2">
+                <div class="col s12 m12 l7 offset-l1" id="items_box_cont">
                     <div class="col s6 m3" id="poster">
                         <a href="#">
                             <div class="card">
@@ -413,7 +613,7 @@ input[type=number]::-webkit-outer-spin-button {
                  <button class="btn waves-effect waves-light" id="continue" type="" name="action" style="margin-top:240px;">Request a Custom Order
 								</button>
                 </div>
-                 
+              </div>
          </form>
      </div> 
               <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>           
