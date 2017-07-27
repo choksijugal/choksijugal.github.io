@@ -88,56 +88,145 @@
       }
       .a {
           background: #fff;
-          height: 360px;
+          height: 286px;
           width:100%;
           margin: 20px 0px 20px 0px;
-          background-image: url("#");
-          background-size: contain;
+          background-image: url("img/CatThumb1.jpg");
+          background-size: 100%;
       }
       .b {
           background: #fff;
-          height: 360px;
           width:100%;
+          height: 431px;
           margin: 20px 0px 20px 0px;
-          background-image: url("#");
-          background-size: contain;
+          background-image: url("img/CatThumb4.jpg");
+          background-size: 100%;
       }
       .c {
-          height: 540px;
+          height: 349px;
           background: #fff;
-          background-image: url("#");
-          background-size: contain;
+          background-image: url("img/CatThumb7.jpg");
+          background-size: 100%;
           margin: 20px 0px 20px 0px;
       }
       .d {
-          height: 180px;
+          height: 432px;
           background: #fff;
-          background-image: url("#");
-          background-size: contain;
+          background-image: url("img/CatThumb2.jpg");
+          background-size: 100%;
           margin: 20px 0px 20px 0px;
       }
       .e {
           background: #fff;
-          height: 360px;
+          height: 346px;
           width:100%;
           margin: 20px 0px 20px 0px;
-          background-image: url("#");
-          background-size: contain;
+          background-image: url("img/CatThumb5.jpg");
+          background-size: 100%;
       }
       .f {
           background: #fff;
-          height: 360px;
+          height: 287px;
           width:100%;
           margin: 20px 0px 20px 0px;
-          background-image: url("#");
-          background-size: contain;
+          background-image: url("img/CatThumb8.jpg");
+          background-size: 100%;
+      }
+      .g {
+          background: #fff;
+          width:100%;
+          height: 288px;
+          margin: 20px 0px 20px 0px;
+          background-image: url("img/CatThumb3.jpg");
+          background-size: 100%;
+      }
+      .h {
+          background: #fff;
+          width:100%;
+          height: 348px;
+          margin: 20px 0px 20px 0px;
+          background-image: url("img/CatThumb6.jpg");
+          background-size: 100%;
+      }
+      .i {
+          background: #fff;
+          width:100%;
+          height: 431px;
+          margin: 20px 0px 20px 0px;
+          background-image: url("img/CatThumb9.jpg");
+          background-size: 100%;
+      }
+      #a, #b, #c, #d, #e, #f, #g, #h, #i {
+          width:100%;
+          height: 100%;
+          background-color: rgba(0,0,0,0.8);
+          opacity: 0;
+          border-style: solid;
+          border-width: 1px;
+          border-color: #3fc3ff;
+          cursor: pointer;
+      }
+      .a:hover #a{
+          opacity: 1;
+    -webkit-transition: .2s;
+    transition: .2s;
+      }
+      td {
+          width: 100%;
+          text-align: center;
+          vertical-align: middle;
+          font-family: 'Montserrat', sans-serif;
+      }
+      .b:hover #b{
+          opacity: 1;
+    -webkit-transition: .2s;
+    transition: .2s;
+      }
+      .c:hover #c{
+          opacity: 1;
+    -webkit-transition: .2s;
+    transition: .2s;
+      }
+      .d:hover #d{
+          opacity: 1;
+    -webkit-transition: .2s;
+    transition: .2s;
+      }
+      .e:hover #e{
+          opacity: 1;
+    -webkit-transition: .2s;
+    transition: .2s;
+      }
+      .f:hover #f{
+          opacity: 1;
+    -webkit-transition: .2s;
+    transition: .2s;
+      }
+      .g:hover #g{
+          opacity: 1;
+    -webkit-transition: .2s;
+    transition: .2s;
+      }
+      .h:hover #h{
+          opacity: 1;
+    -webkit-transition: .2s;
+    transition: .2s;
+      }
+      .i:hover #i{
+          opacity: 1;
+    -webkit-transition: .2s;
+    transition: .2s;
       }
       .categories {
           margin: 20px;
           display: block;
       }
       
-
+    button#continue {
+    background: #3fc3ff;
+    padding: 0px;
+    width: 30%;
+}
       html {
     overflow: scroll;
     overflow-x: hidden;
@@ -315,7 +404,17 @@ a, a:hover {
 .card-image {
     background: rgb(22,22,22)
 }
+#more {
+    height: 0px;
+    overflow: hidden;
+}
+#toggle {
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+}
 </style>
+<style></style>
 </head>
 
 <body onload="Materialize.showStaggeredList('#nav-mobile');">
@@ -551,25 +650,265 @@ a, a:hover {
                         </a>
                     </div>
                 </div>
+                <div class="col s12" id="more">
+                    <div class="col s6 m3" id="poster">
+                        <a href="#">
+                            <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                                <div id="portrait">
+                                 <img class="activator responsive-img img " src="img\poster1.png">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator" id="card-title">Sparked Captain America</span><br />
+                            <span class="card-title activator" id="card-title">Cost: Rs. 120</span>
+                            </div>
+                            
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col s6 m3" id="poster">
+                        <a href="#">
+                            <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                                <div id="landscape">
+                                 <img class="activator responsive-img img " src="img\poster2.jpg">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator" id="card-title">Sparked Captain America</span><br />
+                            <span class="card-title activator" id="card-title">Cost: Rs. 120</span>
+                            </div>
+                            
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col s6 m3" id="poster">
+                        <a href="#">
+                            <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                                <div id="portrait">
+                                 <img class="activator responsive-img img " src="img\poster1.png">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator" id="card-title">Sparked Captain America</span><br />
+                            <span class="card-title activator" id="card-title">Cost: Rs. 120</span>
+                            </div>
+                            
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col s6 m3" id="poster">
+                        <a href="#">
+                            <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                                <div id="landscape">
+                                 <img class="activator responsive-img img " src="img\poster2.jpg">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator" id="card-title">Sparked Captain America</span><br />
+                            <span class="card-title activator" id="card-title">Cost: Rs. 120</span>
+                            </div>
+                            
+                            </div>
+                        </a>
+                    </div>
+                <div class="col s6 m3" id="poster">
+                        <a href="#">
+                            <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                                <div id="landscape">
+                                 <img class="activator responsive-img img " src="img\poster2.jpg">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator" id="card-title">Sparked Captain America</span><br />
+                            <span class="card-title activator" id="card-title">Cost: Rs. 120</span>
+                            </div>
+                            
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col s6 m3" id="poster">
+                        <a href="#">
+                            <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                                <div id="portrait">
+                                 <img class="activator responsive-img img " src="img\poster1.png">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator" id="card-title">Sparked Captain America</span><br />
+                            <span class="card-title activator" id="card-title">Cost: Rs. 120</span>
+                            </div>
+                            
+                            </div>
+                        </a>
+                    </div>
+                <div class="col s6 m3" id="poster">
+                        <a href="#">
+                            <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                                <div id="landscape">
+                                 <img class="activator responsive-img img " src="img\poster2.jpg">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator" id="card-title">Sparked Captain America</span><br />
+                            <span class="card-title activator" id="card-title">Cost: Rs. 120</span>
+                            </div>
+                            
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col s6 m3" id="poster">
+                        <a href="#">
+                            <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                                <div id="portrait">
+                                 <img class="activator responsive-img img " src="img\poster1.png">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator" id="card-title">Sparked Captain America</span><br />
+                            <span class="card-title activator" id="card-title">Cost: Rs. 120</span>
+                            </div>
+                            
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div id="toggle" class="col s12" style="display:block; position: relative;">
+                        More<br><i class="fa fa-chevron-down"></i>
+                    </div>
+                <div class="row"></div>
                 <div class="" id="trending_title">
                    <h4>Categories</h4>
                 </div>
                 <div class="categories col s12">
                     <div class="col s4">
                         <div class="a">
-
+                            <div id="a" class="valign-wrapper">
+                                <table id="cat_head">
+                                    <tr>
+                                        <td>
+                                            <h5>Anime Posters</h5>
+                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
+								</button> 
+                                        </td>    
+                                    </tr>    
+                                </table>
+                            </div>
                         </div>
                         <div class="b">
+                            <div id="b" class="valign-wrapper">
+                                <table id="cat_head">
+                                    <tr>
+                                        <td>
+                                            <h5>Anime Posters</h5>
+                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
+								</button> 
+                                        </td>    
+                                    </tr>    
+                                </table>
+                            </div>
+                        </div>
+                        <div class="c">
+                            <div id="c" class="valign-wrapper">
+                                <table id="cat_head">
+                                    <tr>
+                                        <td>
+                                            <h5>Anime Posters</h5>
+                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
+								</button> 
+                                        </td>    
+                                    </tr>    
+                                </table>
+                            </div>
                         </div>
                     </div>
                     <div class="col s4">
-                        <div class="c"></div>
-                        <div class="d"></div>
-                    </div>
-                    <div class="col s4">
+                        <div class="d">
+                            <div id="d" class="valign-wrapper">
+                                <table id="cat_head">
+                                    <tr>
+                                        <td>
+                                            <h5>Anime Posters</h5>
+                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
+								</button> 
+                                        </td>    
+                                    </tr>    
+                                </table>
+                            </div>
+                        </div>
                         <div class="e">
+                            <div id="e" class="valign-wrapper">
+                                <table id="cat_head">
+                                    <tr>
+                                        <td>
+                                            <h5>Anime Posters</h5>
+                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
+								</button> 
+                                        </td>    
+                                    </tr>    
+                                </table>
+                            </div>
                         </div>
                         <div class="f">
+                            <div id="f" class="valign-wrapper">
+                                <table id="cat_head">
+                                    <tr>
+                                        <td>
+                                            <h5>Anime Posters</h5>
+                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
+								</button> 
+                                        </td>    
+                                    </tr>    
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s4">
+                        <div class="g">
+                            <div id="g" class="valign-wrapper">
+                                <table id="cat_head">
+                                    <tr>
+                                        <td>
+                                            <h5>Anime Posters</h5>
+                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
+								</button> 
+                                        </td>    
+                                    </tr>    
+                                </table>
+                            </div>
+                        </div>
+                        <div class="h">
+                            <div id="h" class="valign-wrapper">
+                                <table id="cat_head">
+                                    <tr>
+                                        <td>
+                                            <h5>Anime Posters</h5>
+                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
+								</button> 
+                                        </td>    
+                                    </tr>    
+                                </table>
+                            </div>
+                        </div>
+                        <div class="i">
+                            <div id="i" class="valign-wrapper">
+                                <table id="cat_head">
+                                    <tr>
+                                        <td>
+                                            <h5>Anime Posters</h5>
+                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
+								</button> 
+                                        </td>    
+                                    </tr>    
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -732,6 +1071,20 @@ a, a:hover {
  });
 
 </script>
-
+<script>
+    $( "div#toggle" ).click(function() {
+    if ( $("#more").height() != 660)
+          $( "#more" ).animate({ height: 660 }, 500 );
+    else
+          $( "#more" ).animate({ height: 0 }, 500 );
+});
+</script>
+<script>
+    $('#toggle').toggle(function() {
+    $(this).html('Less<br><i class="fa fa-chevron-up"></i>');
+}, function() {
+    $(this).html('More<br><i class="fa fa-chevron-down"></i>');
+});
+</script>
 </body>
 </html>
