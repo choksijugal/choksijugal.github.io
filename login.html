@@ -1,0 +1,372 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="css\materialize.min.css">
+	<link type="text/css" rel="stylesheet" href="css\materialize.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">  
+	<link type="text/css" rel="stylesheet" href="css/sitemap.css"/>
+	<style>
+    @keyframes backgroundscroller {
+  from {
+    background-position: 0% 0%;    
+  }
+  to {    background-position: 500% 500%, 400% 400%, 300% 300%, 200% 200%, 100% 100%;    
+  }
+}
+
+  body
+			{
+				
+				color: #eee;
+				background-color: rgba(5,5,5,0.9);
+				background-image: url('img/bg.png');
+	font-family: 'Montserrat', sans-serif;
+		 animation-name: backgroundscroller;
+  animation-duration: 420s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal; 
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  bottom: 0px;
+			}
+.wrappr {
+	border-style:none;
+	border-radius:0px;
+	border-width:1px;
+	border-color:#eeeeee;
+	
+	margin-top:40px;
+	padding:0px;
+	}
+	
+.tabs {
+	background:black;	
+	text-align:center;
+	font-size: 16px;
+	padding:0px;
+	}
+	
+#login {
+	border-style: solid;
+	margin:0px 0px 0px 0px;
+	padding-bottom: 0px;
+	}
+
+#login_tab {
+	border-style: solid;
+	margin:8px 0px 0px 0px;
+	padding-bottom: 0px;
+	}
+	
+forgot {
+	text-align:center;
+	}
+
+#signup {
+	border-style: none;
+	margin-top:0px;
+	}
+	
+#signup_tab {
+	border-style: none;
+	margin-top:8px;
+	}
+	
+div.tab {
+    overflow: hidden;
+    border: 0px;
+    background-color: #000; 
+	margin:0px;
+	padding:0px;
+}
+
+
+div.tab button {
+    background-color: black;
+    float: center;
+    border: solid;
+	border-width:0px;
+    outline: none;
+    cursor: pointer;
+    width:100%;
+    transition: 0.3s;
+    font-size: 20px;
+	line-height:10px;
+	height:40px;
+}
+
+div.tab button:hover {
+	box-shadow: inset 0 -2px #b2ebf2;
+ 	transition: box-shadow 0.1s ease-in;
+}
+
+div.tab button.active {
+    background-color: #000;
+	font-color:white;
+	box-shadow: inset 0 -2px #3fc3ff;
+}
+
+
+.tabcontent {
+	background-color:#eeeeee;
+    display: none;
+    padding-left: 6px;
+    border: 1px solid #ccc;
+    border-top: none;
+	margin-top:0px;
+	padding-top:0px;
+	overflow:hidden;
+	padding-bottom:0px;
+}
+
+.input-field{
+padding:0px;
+margin:0px;
+}
+
+#share-buttons img#fb {
+width: 72px;
+padding:10px 18px 0px 18px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+#share-buttons img#thumb {
+padding:10% 30% 10% 30%;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+table {
+	height:360px;
+	}
+
+input {
+color:#000;
+}
+
+#login_button {
+	height:40px;
+	background:#3fc3ff;
+	text-transform: none;
+	padding: auto;
+	margin-top: 10px;
+	border-radius: 0px;
+}
+ #signup_button {
+	 height:40px;
+	background:#3fc3ff;
+	text-transform: none;
+	padding: auto;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	border-radius: 0px;
+ }
+#upload-button {
+	margin
+}
+#login_form {
+	width:100%;
+	padding-right: 25px;
+	margin: 0px 0px 0px 10px; 
+	border-width: 0px 1px 0px 0px;
+	border-color: rgba(0,0,0,0.5);
+	border-style:solid;
+	display:block;
+		overflow: hidden;
+}
+
+@media only screen and (max-width: 992px) {
+table {
+		height: auto
+	}
+#login_form {
+	border-style:none;
+	width:auto;
+}
+}
+</style>
+</head>
+
+<body>		
+
+		<div class="row">
+			
+			<div class="col s10 m8 l6 offset-s1 offset-m2 offset-l3 wrappr">
+				<div class="tabs">
+					
+					<div class="col s6 tab" id="login_tab">
+					<button class="tablinks" onclick="ChangeMode(event, 'Login')" id="defaultOpen">Login</button>
+					</div>
+					
+					<div class="col s6 tab" id="signup_tab">
+					<button class="tablinks" onclick="ChangeMode(event, 'SignUp')">Signup</button>
+					</div>
+				</div>
+				
+				<div id="Login" class="tabcontent">
+					<div class="col s12 m12 l6">
+						<div style="height:40px;"></div>
+						<div id="login_form">
+							<div class="col s6 m4 l4 offset-s3 offset-m4 offset-l4">
+								<img src="img/logo1.png" class="responsive-img" style="">
+							</div>
+							<div class="row"></div>
+							<div class="row">
+								<form action="#" method="post">
+									<div class="input-field col s12 l12">
+									<input id="username" type="text" >
+									<label for="username">Username</label>
+									</div>
+									
+									<div class="input-field col s12 l12">
+									<input id="password" type="password">
+									<label for="password">Password</label>
+									
+										<button class="btn waves-effect waves-light col s12 m10 l8 offset-m1 offset-l2" id="login_button" type="submit" name="action">Login
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="row forgot center">
+							<a href="#">Forgot Password?</a>
+						</div>
+						
+					</div>
+					
+					<div class="col s12 m12 l6" id="share-buttons">
+						<table>
+							<tr>
+								<td style="vertical-align:middle;text-align:center;">
+									<img src="img\thumb_login.jpg" class="col s12 img-responsive" id="thumb">
+									<h5 style="color:black;display:block">Social Account Login</h5> 
+									<a href="#" class="waves-effect waves-light"><img src="img\icon_fb.jpg" id="fb"></a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				
+				<div id="SignUp" class="tabcontent">
+					<div class="row"></div>
+					<div class="col s1 m2"></div>
+						<div class="col s10 m8">
+						    <form action="#" method="post">
+								<div class="input-field col s12 l12">
+								  <input id="name" type="text" class="validate">
+								  <label for="name">Full Name</label>
+								</div>
+								
+								<div class="input-field col s12 l12">
+								  <input id="username" type="text" class="validate">
+								  <label for="username">Username</label>
+								</div>
+								
+								<div class="input-field col s12 l12">
+								  <input id="password" type="password" class="validate">
+								  <label for="password">Password</label>
+								</div>
+								  
+								<div class="input-field col s12 l12">
+								  <input id="email" type="email" class="validate">
+								  <label for="email">Email ID</label>
+								</div>
+									
+							
+								<button class="btn waves-effect waves-light col s4 offset-s4" id="signup_button" type="submit" name="action">Signup
+								</button>
+							</form>
+						</div>
+					
+					<div class="col s1 m2"></div>
+					
+					<div class="col s12 m12 l12 center-align row" id="share-buttons" style="margin-top:2px;">
+						<hr color="#3fc3ff" width="90%" size="2">
+						<h5 style="color:black">Social Network Signup</h5> 
+						<a href="#" class="waves-effect waves-light"><img src="img\icon_fb.jpg" id="fb"></a>
+					</div>
+				</div>
+				<div class="row"></div>
+			</div>
+				
+		</div>
+
+					
+		<div class="col s2 m2 l3">
+		</div>
+		<div id="sitemap" class="col s12 row" style="margin-bottom: 0px">
+    <div id="quick" class="col s12">
+        <div id="quick_title" class="col s12">
+            Quick Links    
+        </div>
+        <div class="col s4" id="links">
+            <a href="#">Home</a><br>    
+            <a href="#">Profile</a><br>
+            <a href="#">Cart</a><br>  
+            <a href="#">Wishlist</a><br>
+            <a href="#">Orders</a><br>
+        </div>  
+        <div class="col s4" id="links">
+            <a href="#">Anime</a><br>    
+            <a href="#">TV Series</a><br>
+            <a href="#">Quotes</a><br>  
+            <a href="#">Music</a><br>
+            <a href="#">Vehicles</a><br>
+        </div>   
+        <div class="col s4" id="links">
+            <a href="#">Gaming</a><br>    
+            <a href="#">Sports</a><br>
+            <a href="#">Celebrities</a><br>  
+            <a href="#">Superheroes</a><br>
+            <a href="#">Miscellaneous</a><br>
+        </div>     
+    </div>
+    <div id="contact" class="col s12">
+        <div id="quick_title" class="col s12">
+            Contact Us
+        </div>
+        <div id="contact_det" class="col s12">
+            Room 341, Jamuna Hostel <br>
+            IIT Madras, Adyar <br>
+            Chennai 600036 <br>
+            <div id="break"></div>
+            +91 97890 22998<br>
+            <div id="break"></div>
+            support@ postinc.in
+        </div>
+    </div>
+    <div class="col s12" id="discover">
+         <div id="quick_title" class="col s12">
+            Discover More
+        </div>
+        <a href="#" class="waves-effect waves-light"><img src="img\icon_fb.jpg" id="fb"></a>
+        <a href="#" class="waves-effect waves-light"><img src="img\icon_insta.jpg" id="fb"></a>
+    </div>
+    <div id="sitemap_logo" class="col s12">
+        <img src="img/logo.png">
+    </div>
+</div> 
+	<script>
+function ChangeMode(evt, mode) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(mode).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>	
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/materialize.js"></script>
+</body>
+</html>
