@@ -31,12 +31,23 @@
 #portrait {
     width: 100%;
     background: black;
-    padding: 0px 20px 0px 20px;
+    padding:1% 16% 1% 16% ;
 }
 #landscape {
     width: 100%;
     background: black;
-    padding: 20px 0px 20px 0px;
+    padding: 16% 0px 16% 0px;
+}
+#items_box2 #portrait {
+    width: 100%;
+    background: black;
+    padding:1% 20% 1% 20% ;
+}
+#items_box2 #landscape {
+    width: 87%;
+    background: black;
+    padding: 11% 0% 11% 0px;
+    margin: 20px 0px 0px 7%;
 }
           #items_box_cont {
              background: rgba(5,5,5,0.5);
@@ -218,6 +229,28 @@ input[type=number]::-webkit-outer-spin-button {
           cursor: pointer;
       }
     #poster {
+        padding: 20px 20px 0px 20px;
+          float : center;
+          border-style: solid;
+          border-style: none;
+          height: 100px;
+      }
+    #items_box2 #portrait:hover, #items_box2 #landscape:hover {
+    box-shadow: inset 0 -2px #3fc3ff;
+    cursor: pointer;
+        transform: scale(1.05);
+  transition-timing-function:cubic-bezier(0.5, 0, 0.1, 1);
+  transition-duration:400ms;
+    }
+    #poster2:hover {
+        transform: scale(1.05);
+  transition-timing-function:cubic-bezier(0.5, 0, 0.1, 1);
+  transition-duration:400ms;
+  cursor: pointer;
+    box-shadow: 0 0px 10px #3fc3ff;
+    }
+    #poster1 {
+        padding: 20px 10px 0px 10px;
           float : center;
           border-style: solid;
           border-style: none;
@@ -227,6 +260,10 @@ input[type=number]::-webkit-outer-spin-button {
           text-transform: none;
           height: 40px;
       }
+        #mode button {
+            width: 29%;
+            margin-left: 20px;
+        }
          @media only screen and (max-width: 992px) {
  #wrappr{
      margin: 40px;
@@ -289,13 +326,15 @@ input[type=number]::-webkit-outer-spin-button {
                         </div>      
                       </div>
                     </div> 
-                    <div class="col s12 m12 l4 center" id="mode">
-                         <button class="btn waves-effect waves-light" id="continue" type="" name="action">Switch to Seller Mode
+                    <div class="col s12 m12 l5 center" id="mode">
+                         <button class="btn waves-effect waves-light " id="continue" type="" name="action">Buyer
+                                </button> 
+                         <button class="btn waves-effect waves-light" id="continue" type="" name="action">Seller
 								</button> 
                     </div>  
                     <div class="col s10"></div>
                   <div id="items_box3" style="padding:0px 80px 0px 80px">
-                      <div class="col s4">
+                      <div class="col s10 l4 offset-s1">
                         <div class="col s12" id="profile_cont">
                             <div id="stats_title">
                                 User Statistics
@@ -344,7 +383,7 @@ input[type=number]::-webkit-outer-spin-button {
                         </div>
                       </div>
                       
-                      <div class="col s4">
+                      <div class="col s10 l4 offset-s1">
                         <div class="col s12" id="profile_cont">
                             <img src="img/thumb_login.jpg" class="img img-responsive col s10 offset-s1">
                             <div id="name" class="col s12 center">
@@ -354,7 +393,7 @@ input[type=number]::-webkit-outer-spin-button {
                         </div>
                       </div>
                     
-                      <div class="col s4">
+                      <div class="col s10 l4 offset-s1">
                         <div class="col s12" id="profile_cont">
                             <div id="stats_title">
                                 Personal Details
@@ -544,68 +583,40 @@ input[type=number]::-webkit-outer-spin-button {
               <div id="items_box2">
                 <div class="col s12 m12 l7 offset-l1" id="items_box_cont">
                     <div class="col s6 m3" id="poster">
-                        <a href="#">
-                            <div class="card">
-                            <div class="card-image waves-effect waves-block waves-light ">
-                            <img class="activator" src="img/poster1.jpg" >
-                            </div>                            
-                            </div>
-                        </a>
+                        <div id="portrait">
+                         <img class="responsive-img img" src="img\poster1.png">
+                         </div>
                     </div>
+                    <div class="col s6 m3">
+                      <div id="landscape">
+                           <img class="responsive-img img" src="img\poster2.jpg">
+                      </div>
+                  </div>
                     <div class="col s6 m3" id="poster">
-                        <a href="#">
-                            <div class="card">
-                            <div class="card-image waves-effect waves-block waves-light ">
-                            <img class="activator" src="img/poster1.jpg" >
-                            </div>                            
-                            </div>
-                        </a>
+                        <div id="portrait">
+                         <img class="responsive-img img" src="img\poster1.png">
+                         </div>
                     </div>
+                    <div class="col s6 m3">
+                      <div id="landscape">
+                           <img class="responsive-img img" src="img\poster2.jpg">
+                      </div>
+                  </div>
                     <div class="col s6 m3" id="poster">
-                        <a href="#">
-                            <div class="card">
-                            <div class="card-image waves-effect waves-block waves-light ">
-                            <img class="activator" src="img/poster1.jpg" >
-                            </div>                            
-                            </div>
-                        </a>
+                        <div id="portrait">
+                         <img class="responsive-img img" src="img\poster1.png">
+                         </div>
                     </div>
-                    <div class="col s6 m3" id="poster">
-                        <a href="#">
-                            <div class="card">
-                            <div class="card-image waves-effect waves-block waves-light ">
-                            <img class="activator" src="img/poster1.jpg" >
-                            </div>                            
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col s6 m3" id="poster">
-                        <a href="#">
-                            <div class="card">
-                            <div class="card-image waves-effect waves-block waves-light ">
-                            <img class="activator" src="img/poster1.jpg" >
-                            </div>                            
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col s6 m3" id="poster">
-                        <a href="#">
-                            <div class="card">
-                            <div class="card-image waves-effect waves-block waves-light ">
-                            <img class="activator" src="img/poster1.jpg" >
-                            </div>                            
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col s6 m3" id="poster">
-                        <a href="#">
-                            <div class="card">
-                            <div class="card-image waves-effect waves-block waves-light ">
-                            <img class="activator" style="opacity: 0.6;" src="img/add.jpg" >
-                            </div>                            
-                            </div>
-                        </a>
-                    </div>
+                    <div class="col s6 m3">
+                      <div id="landscape">
+                           <img class="responsive-img img" src="img\poster2.jpg">
+                      </div>
+                  </div>
+                    <div class="col s6 m3">
+                      <div id="poster1">
+                           <img class="responsive-img img" src="img\add.jpg" id="poster2">
+                      </div>
+                  </div>
                     
                 </div>
                 

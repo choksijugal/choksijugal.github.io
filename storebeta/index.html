@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="css/store.css"/>
+    <link type="text/css" rel="stylesheet" href="css/sitemap.css"/>
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -21,6 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
+       
       #cont {
           background: rgba(40,40,40,0.5);
           width:90%;
@@ -251,7 +253,8 @@
 }
 div::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
+    background: transparent; 
+    display: none; /* optional: just make scrollbar invisible */
 }
 /* optional: show position indicator in red */
 /*::-webkit-scrollbar-thumb {
@@ -342,8 +345,8 @@ z-index: 0;
 
 
 #wrapper .card{
-  width: 192px;
-  height:240px;
+  width: 240px;
+  height:235px;
   background:#fff;
   float:left;
   margin-right:50px;
@@ -366,16 +369,25 @@ z-index: 0;
   z-index:100;
   position:relative;
   border-style: solid;
-  border-color:#3fc3ff;
+    box-shadow: 0 0px 10px #3fc3ff;
   border-width: 2px;
   transition-timing-function:cubic-bezier(0.5, 0, 0.1, 1);
   transition-duration:400ms;  
+}
+#wrapper #portrait {
+    width: 100%;
+    background: black;
+    padding:1% 16% 1% 16% ;
+}
+#wrapper #landscape {
+    width: 100%;
+    background: black;
+    padding: 16% 0px 16% 0px;
 }
 
  .inside-top{
   width:100%;
   height:240px;
-  background:#555;
   position:absolute;
   top:0;
   left:0;
@@ -921,121 +933,144 @@ a, a:hover {
     <!-- <button class="btn arrow-guides fa-chevron-left"></button> -->
    <ul id="contnt" style="background: transperant">
     
-    <li class="card effect1">
+    <li class="card effect">
       <div class="inside-top">
-        
+        <div id="portrait">
+            <img class="responsive-img img" src="img\poster1.png">
+        </div>
       </div>
     </li>
      <li class="card">
       <div class="inside-top">
-
+        <div id="landscape">
+            <img class="responsive-img img" src="img\poster2.jpg">
+        </div>
+      </div>
+    </li><li class="card effect">
+      <div class="inside-top">
+        <div id="portrait">
+            <img class="responsive-img img" src="img\poster1.png">
+        </div>
       </div>
     </li>
      <li class="card">
       <div class="inside-top">
-
+        <div id="landscape">
+            <img class="responsive-img img" src="img\poster2.jpg">
+        </div>
+      </div>
+    </li>
+    <li class="card effect">
+      <div class="inside-top">
+        <div id="portrait">
+            <img class="responsive-img img" src="img\poster1.png">
+        </div>
       </div>
     </li>
      <li class="card">
       <div class="inside-top">
-
+        <div id="landscape">
+            <img class="responsive-img img" src="img\poster2.jpg">
+        </div>
+      </div>
+    </li>
+    <li class="card effect">
+      <div class="inside-top">
+        <div id="portrait">
+            <img class="responsive-img img" src="img\poster1.png">
+        </div>
       </div>
     </li>
      <li class="card">
       <div class="inside-top">
-
+        <div id="landscape">
+            <img class="responsive-img img" src="img\poster2.jpg">
+        </div>
+      </div>
+    </li>
+    <li class="card effect">
+      <div class="inside-top">
+        <div id="portrait">
+            <img class="responsive-img img" src="img\poster1.png">
+        </div>
       </div>
     </li>
      <li class="card">
       <div class="inside-top">
-
+        <div id="landscape">
+            <img class="responsive-img img" src="img\poster2.jpg">
+        </div>
+      </div>
+    </li>
+    <li class="card effect">
+      <div class="inside-top">
+        <div id="portrait">
+            <img class="responsive-img img" src="img\poster1.png">
+        </div>
       </div>
     </li>
      <li class="card">
       <div class="inside-top">
-
+        <div id="landscape">
+            <img class="responsive-img img" src="img\poster2.jpg">
+        </div>
+      </div>
+    </li>
+    <li class="card effect">
+      <div class="inside-top">
+        <div id="portrait">
+            <img class="responsive-img img" src="img\poster1.png">
+        </div>
       </div>
     </li>
      <li class="card">
       <div class="inside-top">
-        
+        <div id="landscape">
+            <img class="responsive-img img" src="img\poster2.jpg">
+        </div>
+      </div>
+    </li>
+    <li class="card effect">
+      <div class="inside-top">
+        <div id="portrait">
+            <img class="responsive-img img" src="img\poster1.png">
+        </div>
       </div>
     </li>
      <li class="card">
       <div class="inside-top">
-
+        <div id="landscape">
+            <img class="responsive-img img" src="img\poster2.jpg">
+        </div>
+      </div>
+    </li>
+    <li class="card effect">
+      <div class="inside-top">
+        <div id="portrait">
+            <img class="responsive-img img" src="img\poster1.png">
+        </div>
       </div>
     </li>
      <li class="card">
       <div class="inside-top">
-
+        <div id="landscape">
+            <img class="responsive-img img" src="img\poster2.jpg">
+        </div>
+      </div>
+    </li>
+    <li class="card effect">
+      <div class="inside-top">
+        <div id="portrait">
+            <img class="responsive-img img" src="img\poster1.png">
+        </div>
       </div>
     </li>
      <li class="card">
       <div class="inside-top">
-
+        <div id="landscape">
+            <img class="responsive-img img" src="img\poster2.jpg">
+        </div>
       </div>
-    </li>
-     <li class="card">
-      <div class="inside-top">
-
-      </div>
-    </li>
-     <li class="card">
-      <div class="inside-top">
-
-      </div>
-    </li>
-     <li class="card">
-      <div class="inside-top">
-
-      </div>
-    </li>
-    <li class="card">
-      <div class="inside-top">
-
-      </div>
-    </li>
-     <li class="card">
-      <div class="inside-top">
-
-      </div>
-    </li>
-    <li class="card">
-      <div class="inside-top">
-
-      </div>
-    </li>
-    <li class="card">
-      <div class="inside-top">
-
-      </div>
-    </li>
-     <li class="card">
-      <div class="inside-top">
-
-      </div>
-    </li>
-    <li class="card">
-      <div class="inside-top">
-
-      </div>
-    </li>
-     <li class="card">
-      <div class="inside-top">
-
-      </div>
-    </li>
-     <li class="card">
-      <div class="inside-top">
-
-      </div>
-    </li>
-     <li class="card">
-      <div class="inside-top">
-
-      </div>
-       
     </li>
     
    </ul>
@@ -1047,6 +1082,58 @@ a, a:hover {
 <span id="controlR" class="right-controls" role="button" aria-label="See Previous Modules"><font color="white" style="margin-top:60px;" size="5"><i class="fa fa-chevron-right"></i></font>
   
   
+</div>
+<div id="sitemap" class="col s12">
+    <div id="quick" class="col s12">
+        <div id="quick_title" class="col s12">
+            Quick Links    
+        </div>
+        <div class="col s4" id="links">
+            <a href="#">Home</a><br>    
+            <a href="#">Profile</a><br>
+            <a href="#">Cart</a><br>  
+            <a href="#">Wishlist</a><br>
+            <a href="#">Orders</a><br>
+        </div>  
+        <div class="col s4" id="links">
+            <a href="#">Anime</a><br>    
+            <a href="#">TV Series</a><br>
+            <a href="#">Quotes</a><br>  
+            <a href="#">Music</a><br>
+            <a href="#">Vehicles</a><br>
+        </div>   
+        <div class="col s4" id="links">
+            <a href="#">Gaming</a><br>    
+            <a href="#">Sports</a><br>
+            <a href="#">Celebrities</a><br>  
+            <a href="#">Superheroes</a><br>
+            <a href="#">Miscellaneous</a><br>
+        </div>     
+    </div>
+    <div id="contact" class="col s12">
+        <div id="quick_title" class="col s12">
+            Contact Us
+        </div>
+        <div id="contact_det" class="col s12">
+            Room 341, Jamuna Hostel <br>
+            IIT Madras, Adyar <br>
+            Chennai 600036 <br>
+            <div id="break"></div>
+            +91 97890 22998<br>
+            <div id="break"></div>
+            support@ postinc.in
+        </div>
+    </div>
+    <div class="col s12" id="discover">
+         <div id="quick_title" class="col s12">
+            Discover More
+        </div>
+        <a href="#" class="waves-effect waves-light"><img src="img\icon_fb.jpg" id="fb"></a>
+        <a href="#" class="waves-effect waves-light"><img src="img\icon_insta.jpg" id="fb"></a>
+    </div>
+    <div id="sitemap_logo" class="col s12">
+        <img src="img/logo.png">
+    </div>
 </div>
 </div>
     <!-- End of trending posters and categories -->
@@ -1072,8 +1159,8 @@ a, a:hover {
 </script>
 <script>
     $( "div#toggle" ).click(function() {
-    if ( $("#more").height() != 660)
-          $( "#more" ).animate({ height: 660 }, 500 );
+    if ( $("#more").height() != 680)
+          $( "#more" ).animate({ height: 680}, 500 );
     else
           $( "#more" ).animate({ height: 0 }, 500 );
 });
