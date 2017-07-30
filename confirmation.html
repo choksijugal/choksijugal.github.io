@@ -1,0 +1,53 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="css\materialize.min.css">
+	<link type="text/css" rel="stylesheet" href="css\materialize.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">  
+	<link type="text/css" rel="stylesheet" href="css/sitemap.css"/>
+	<style>
+    @keyframes backgroundscroller {
+  from {
+    background-position: 0% 0%;    
+  }
+  to {    background-position: 500% 500%, 400% 400%, 300% 300%, 200% 200%, 100% 100%;    
+  }
+}
+
+  body
+			{
+				
+				color: #eee;
+				background-color: rgba(5,5,5,0.9);
+				background-image: url('img/bg.png');
+	font-family: 'Montserrat', sans-serif;
+		 animation-name: backgroundscroller;
+  animation-duration: 420s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal; 
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  bottom: 0px;
+			}
+    #container {
+        margin-top: 40px;
+        background: rgb(22,22,22);
+        text-align: center;
+        padding: 50px;
+    }
+</style>
+</head>
+
+<body>		
+    <div class="row">
+        <div class="col s10 offset-s1" id="container">
+            <img src="img\thumb_confirm.jpg" class="col s2 offset-s5 img-responsive" id="thumb">
+            <div class="row"></div>
+            <div class="col s12">
+               <h4>Your order has been placed successfully</h4>
+            </div>
+        </div>
+    </div>
+		
+</body>
+</html>

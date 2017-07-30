@@ -205,6 +205,16 @@ input[type=number]::-webkit-outer-spin-button {
              font-size: 18px;
              font-weight: bold;
          }
+         button#pin_button {
+    margin: 0px 0px 0px;
+    height:40px;
+    padding:0px;
+    display:inline;
+    box-shadow: none;
+    background: none;
+    color:#3fc3ff;
+    text-transform: none;
+}
 </style>
 </head>
 <body>
@@ -373,7 +383,7 @@ input[type=number]::-webkit-outer-spin-button {
       <div class="row"></div>
     </div>
   </div>
-  <div class="col s12 m12 l3 summary" id="summary" >
+  <div class="col s12 m12 l3 summary" id="summary">
                         <div class="summary_head">
                             Order Summary
                         </div>
@@ -393,6 +403,15 @@ input[type=number]::-webkit-outer-spin-button {
                                     </td>
                                     <td id="green">
                                         FREE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="email" type="text" class="validate" placeholder="Enter Coupon Code">    
+                                    </td>    
+                                    <td>
+                                        <button class="btn waves-effect waves-light" id="pin_button" type="submit" name="pincode">Apply
+					</button>
                                     </td>
                                 </tr>   
                             </table>

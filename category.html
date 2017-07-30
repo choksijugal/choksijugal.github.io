@@ -430,7 +430,31 @@ a, a:hover {
 
 <body onload="Materialize.showStaggeredList('#nav-mobile');">
    <!-- Header begin -->
-   
+   <div class="row">
+       <div class="col m12">
+            <div class="navbar-fixed" id="storeheader" style="z-index:1100">
+                <nav class="black z-depth-5" role="navigation">
+                    <div class="nav-wrapper">
+                        <div class="col m4">
+                            <span class="menuicon" id="opensidenav"><i class="material-icons">menu</i></span>
+                        </div>
+                        <a class="logoname center" href="#" class="brand-logo">POSTINC | STORE</a>
+                        <span class="caret storedropdown"></span>
+                        <ul id="nav-mobile" class="right hide-on-small-only">
+                          <li><a href="#"><i class="large material-icons panelicons">notifications</i></a></li>
+                          <li><i class="large material-icons panelicons">local_grocery_store</i></li>
+                          <li><a href="#"><i class="large material-icons panelicons">person</i></a></li>
+                        </ul>
+                        <ul class="side-nav" id="mobile-demo">
+                            <li><a href="#"><i class="large material-icons">add_alert</i></a></li>
+                            <li><a href="#"><i class="large material-icons">shopping_cart</i></a></li>
+                            <li><a href="#"><i class="large material-icons">perm_identity</i></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
     <!-- Header end -->
    <!--  <ul class="dropdownmenu">
         <li>Store</li>
@@ -505,7 +529,7 @@ a, a:hover {
         <div class=" lowerpart row" style="width:100%;margin:0px;padding:0px;">
             <div class="col s12" id="cont">
                 <div class="" id="trending_title">
-                   <h4>Trending Designs</h4>
+                   <h4>TV Series Posters</h4>
                 </div>
                 <div class="col s12" id="trending_posters">
                     <div class="col s6 m3" id="poster">
@@ -771,134 +795,7 @@ a, a:hover {
                         More<br><i class="fa fa-chevron-down"></i>
                     </div>
                 <div class="row"></div>
-                <div class="" id="trending_title">
-                   <h4>Categories</h4>
-                </div>
-                <div class="categories col s12">
-                    <div class="col s4">
-                        <div class="a">
-                            <div id="a" class="valign-wrapper">
-                                <table id="cat_head">
-                                    <tr>
-                                        <td>
-                                            <h5>Animes</h5>
-                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
-								</button> 
-                                        </td>    
-                                    </tr>    
-                                </table>
-                            </div>
-                        </div>
-                        <div class="b">
-                            <div id="b" class="valign-wrapper">
-                                <table id="cat_head">
-                                    <tr>
-                                        <td>
-                                            <h5>Music Bands</h5>
-                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
-								</button> 
-                                        </td>    
-                                    </tr>    
-                                </table>
-                            </div>
-                        </div>
-                        <div class="c">
-                            <div id="c" class="valign-wrapper">
-                                <table id="cat_head">
-                                    <tr>
-                                        <td>
-                                            <h5>Sports</h5>
-                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
-								</button> 
-                                        </td>    
-                                    </tr>    
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s4">
-                        <div class="d">
-                            <div id="d" class="valign-wrapper">
-                                <table id="cat_head">
-                                    <tr>
-                                        <td>
-                                            <h5>TV Series</h5>
-                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
-								</button> 
-                                        </td>    
-                                    </tr>    
-                                </table>
-                            </div>
-                        </div>
-                        <div class="e">
-                            <div id="e" class="valign-wrapper">
-                                <table id="cat_head">
-                                    <tr>
-                                        <td>
-                                            <h5>Vehicles</h5>
-                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
-								</button> 
-                                        </td>    
-                                    </tr>    
-                                </table>
-                            </div>
-                        </div>
-                        <div class="f">
-                            <div id="f" class="valign-wrapper">
-                                <table id="cat_head">
-                                    <tr>
-                                        <td>
-                                            <h5>Superheroes</h5>
-                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
-								</button> 
-                                        </td>    
-                                    </tr>    
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s4">
-                        <div class="g">
-                            <div id="g" class="valign-wrapper">
-                                <table id="cat_head">
-                                    <tr>
-                                        <td>
-                                            <h5>Quotes</h5>
-                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
-								</button> 
-                                        </td>    
-                                    </tr>    
-                                </table>
-                            </div>
-                        </div>
-                        <div class="h">
-                            <div id="h" class="valign-wrapper">
-                                <table id="cat_head">
-                                    <tr>
-                                        <td>
-                                            <h5>Gaming</h5>
-                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
-								</button> 
-                                        </td>    
-                                    </tr>    
-                                </table>
-                            </div>
-                        </div>
-                        <div class="i">
-                            <div id="i" class="valign-wrapper">
-                                <table id="cat_head">
-                                    <tr>
-                                        <td>
-                                            <h5>Miscellaneous</h5>
-                                            <button class="btn waves-effect waves-light" id="continue" type="" name="action">Browse&nbsp;<i class="fa fa-chevron-right" style="font-size: 14px"></i>
-								</button> 
-                                        </td>    
-                                    </tr>    
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
 </div>
     <div class="col s12" id="wrapper" >
   
@@ -1108,7 +1005,7 @@ a, a:hover {
         <a href="#" class="waves-effect waves-light"><img src="img\icon_insta.jpg" id="fb"></a>
     </div>
     <div id="sitemap_logo" class="col s12">
-        <img src="img/logo.png">
+        <img src="img/Logo.png">
     </div>
 </div>
 </div>

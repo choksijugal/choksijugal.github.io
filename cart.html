@@ -102,9 +102,6 @@
              font-size: 18px;
              height: 50px;
              text-transform: none;
-             border-style: solid;
-             border-width: 0px 0px 1px 0px;
-             border-color: #3fc3ff;
              border-radius: 0px;
          }
          #btn3 button{
@@ -252,6 +249,16 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%;
     background: black;
     padding: 20px 0px 20px 0px;
+}
+button#pin_button {
+    margin: 0px 0px 0px;
+    height:40px;
+    padding:0px;
+    display:inline;
+    box-shadow: none;
+    background: none;
+    color:#3fc3ff;
+    text-transform: none;
 }
          @media only screen and (max-width: 992px) {
  #wrappr{
@@ -421,6 +428,15 @@ input[type=number]::-webkit-outer-spin-button {
                                     <td id="green">
                                         FREE
                                     </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="email" type="text" class="validate" placeholder="Enter Coupon Code">    
+                                    </td>    
+                                    <td>
+                                        <button class="btn waves-effect waves-light" id="pin_button" type="submit" name="pincode">Apply
+					</button>
+                                    </td>
                                 </tr>   
                             </table>
                         </div>
@@ -439,7 +455,7 @@ input[type=number]::-webkit-outer-spin-button {
                 </div>
                 <div class="col s12 m12 l7 offset-l1 buttons right-align">
                     <div id="btn2" class=" col s6 m6 l4 offset-l4">
-                            <button class="btn waves-effect waves-light col s12 m10 l8 offset-m1 offset-l2" id="checkout" name="action"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;Continue Shopping
+                            <button class="btn waves-effect waves-light col s12 m10 l8 offset-m1 offset-l2" id="checkout" name="action">Continue Shopping
     						</button>
                     </div>
                     <div id="btn3" class=" col s6 m6 l4">
