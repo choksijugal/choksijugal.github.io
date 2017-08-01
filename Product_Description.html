@@ -35,14 +35,13 @@
         #frame_container {
             font-family: "Garamond", serif;
             font-size: 24px;
-            background-color: rgb(22,22,22);
             padding:10px;
         }
         #frame, #paper {
             background: #ddd;
-            width:24%;
-            height:95px;
-            margin:0px 3px 3px 0px;
+            width:22%;
+            height:85px;
+            margin:0px 7px 7px 0px;
             display:inline;
             padding:0px;
             display: inline;
@@ -54,9 +53,9 @@
             margin-bottom:4px;
         }
         #poster {
-            
-            height:450px;
-            padding: 10px 20px 0px 20px;
+            background: rgb(22,22,22);
+            padding: 20px 0px 20px 0px;
+            height: 450px;
         }
         #frames, #papers {
             margin-bottom:12px;
@@ -98,7 +97,6 @@
     padding: 0px;
 }
 #buttons2 {
-    margin-top:20px;
     padding: 0px 20px 0px 20px;
 }
 #btn {
@@ -415,8 +413,17 @@ textarea {
 
 }
 * {margin: 0; padding: 0;}
-.magnify {margin: 0px auto; position: relative;}
-
+.magnify {margin: auto; position: relative;}
+#por {
+    height: 100%;
+}
+#btn1 button {
+    font-size: 12px;
+}
+#lan {
+    width : 90%;
+    align: center;
+}
 .large {
 	width: 150%; height: 100%;
 	position: absolute;
@@ -443,7 +450,7 @@ input#pin_code:focus, input#pin_code::after {
 
     <body>
         <div class="wrappr" style="margin:40px 0px 0px 0px;padding: 0% 4% 0% 4%;">
-            <div class="row" style="margin-bottom:0px;">
+            <div class="row" style="margin-bottom:0px;padding: 10px;background: rgb(40,40,40)">
             <div class="col s12 l4" id="frame_container">
                 <div class="col s12" id="frame_head">
                     Select Frame:
@@ -540,12 +547,12 @@ input#pin_code:focus, input#pin_code::after {
             <div class="col s10 l4 center-align" id="poster">
                 <div class="magnify">
                     	<div class="large"></div>
-
-                <img  class="small" src="img/poster1.png" height="100%" style="">
+                            
+                <img  class="small" id="por" src="img/poster1.png" style="">
                 </div>
             </div>
            
-            <div class="col s10 l4 offset-s1" style="background: rgb(22,22,22);padding:5px 10px 30px 10px">
+            <div class="col s10 l4 offset-s1" style="padding:5px 10px 30px 10px">
                 <div class="col s12" id="poster_title">
                     <h4>Sparked Captain America</h4>
                 </div>
@@ -597,7 +604,7 @@ input#pin_code:focus, input#pin_code::after {
             </div>
   
         </div>
-        <div class="row">
+        <div class="row" style="padding-bottom: 20px;background: rgb(40,40,40)">
             <div class="col s10 l4 offset-l4 offset-s1" id="buttons2">
                     <div class="col s6" id="btn">
                     <button class="btn waves-effect waves-light col s6" id="checkout" type="submit" name="action">Buy Now
@@ -887,7 +894,7 @@ input#pin_code:focus, input#pin_code::after {
 			{
 				var rx = Math.round(mx/$(".small").width()*native_width - $(".large").width()/2)*-1;
 				var ry = Math.round(my/$(".small").height()*native_height - $(".large").height()/2)*-1;
-				var bgp = rx + 30 + "px " + ry + "px";
+				var bgp = rx + 180 + "px " + ry + "px";
 				
 				var px = mx - $(".large").width()/2;
 				var py = my - $(".large").height()/2;
