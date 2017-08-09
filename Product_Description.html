@@ -5,6 +5,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
         <link type="text/css" rel="stylesheet" href="css/sitemap.css"/>
         <style>
             
@@ -449,6 +450,31 @@ input#pin_code:focus, input#pin_code::after {
     </head>
 
     <body>
+	<div class="row">
+       <div class="col m12">
+            <div class="navbar-fixed" id="storeheader" style="z-index:1100">
+                <nav class="black z-depth-5" role="navigation">
+                    <div class="nav-wrapper">
+                        <div class="col m4">
+                            <span class="menuicon" id="opensidenav"><i class="material-icons">menu</i></span>
+                        </div>
+                        <a class="logoname center" href="#" class="brand-logo">POSTINC | STORE</a>
+                        <span class="caret storedropdown"></span>
+                        <ul id="nav-mobile" class="right hide-on-small-only">
+                          <li><a href="#"><i class="large material-icons panelicons">notifications</i></a></li>
+                          <li><i class="large material-icons panelicons">local_grocery_store</i></li>
+                          <li><a href="#"><i class="large material-icons panelicons">person</i></a></li>
+                        </ul>
+                        <ul class="side-nav" id="mobile-demo">
+                            <li><a href="#"><i class="large material-icons">add_alert</i></a></li>
+                            <li><a href="#"><i class="large material-icons">shopping_cart</i></a></li>
+                            <li><a href="#"><i class="large material-icons">perm_identity</i></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
         <div class="wrappr" style="margin:40px 0px 0px 0px;padding: 0% 4% 0% 4%;">
             <div class="row" style="margin-bottom:0px;padding: 10px;background: rgb(40,40,40)">
             <div class="col s12 l4" id="frame_container">
