@@ -54,6 +54,14 @@ a {
   background: #111;
 }
 
+#navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+#navbar a:hover {
+    color: inherit;
+    opacity: 0.75;
+}
 /* Navigation Menu - List items */
 .nav-item {
   /* non-critical appearance styles */
