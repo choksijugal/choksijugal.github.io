@@ -51,9 +51,9 @@
 }
 
 /* Navigation Menu - List items */
-.nav-item, .navitem {
+.nav-item {
   /* non-critical appearance styles */
-  width: 200px;
+  width: 225px;
   border-top: 1px solid #111;
   border-bottom: 1px solid #000;
 }
@@ -70,7 +70,7 @@
 }
 .navitem {
   /* non-critical appearance styles */
-  width: 200px;
+  width: 225px;
   border-top: 1px solid #111;
   border-bottom: 1px solid #000;
   display: block;
@@ -134,7 +134,7 @@ label[for="nav-trigger"] {
 }
 
 .nav-trigger:checked ~ .site-wrap {
-  left: 200px;
+  left: 225px;
   box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
 }
 
