@@ -61,7 +61,7 @@
 .nav-item a {
   /* non-critical appearance styles */
   display: block;
-  padding: 1em;
+  padding: 0.70em;
   background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
   color: white;
   font-size: 1.2em;
@@ -74,7 +74,7 @@
   border-top: 1px solid #111;
   border-bottom: 1px solid #000;
   display: block;
-  padding: 1em;
+  padding: 0.7em;
   background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
   color: white;
   font-size: 1.2em;
@@ -155,6 +155,20 @@ code {
     background: #ddd;
 }
 
+input#search_field {
+  padding-top: 40px;
+  margin-bottom: 0px;
+  display: inline;
+  width: 80%;
+}
+
+button#search_button {
+  padding: 0px !important;
+  background: none;
+  border: none;
+  width: auto !important;
+  display: inline !important;
+}
 /* Micro reset */
 *,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
 html, body { height: 100%; width: 100%; font-family: Helvetica, Arial, sans-serif; }
