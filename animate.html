@@ -14,6 +14,10 @@
         }
         .st3 {
             stroke:#eee;
+            stroke-width: 3;
+            stroke-miterlimit: 10;
+            stroke-linejoin: round;
+            stroke-linejoin: round;
             /* stroke-dasharray: 1000;
             animation: dash 5s ease-out infinite; */
         }
@@ -24,7 +28,7 @@
   animation-iteration-count: 1;
   
   animation-name: DrawLine, FadeStroke, FillIn;
-  animation-duration: 3.5s, 0.5s, 0.5s;
+  animation-duration: 3.5s, 0.5s, 0.75s;
   animation-delay: 0s, 2.8s, 2.8s;
   stroke-dashArray: 1275;
   stroke-dashoffset: 1275; 
@@ -37,7 +41,7 @@
   animation-iteration: 1;
   
   animation-name: FillIn;
-  animation-duration: 0.5s;
+  animation-duration: 0.75s;
   animation-delay: 2.8s;
 }
 @keyframes DrawLine {
