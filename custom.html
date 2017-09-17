@@ -1,0 +1,100 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="css\materialize.min.css">
+	<link type="text/css" rel="stylesheet" href="css\materialize.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">  
+	<link type="text/css" rel="stylesheet" href="css/sitemap.css"/>
+	<style>
+    @keyframes backgroundscroller {
+  from {
+    background-position: 0% 0%;    
+  }
+  to {    background-position: 500% 500%, 400% 400%, 300% 300%, 200% 200%, 100% 100%;    
+  }
+}
+h4 {
+    font-size: 3vw;
+}
+  body
+			{
+				
+				color: #eee;
+				background-color: rgba(5,5,5,0.9);
+				background-image: url('img/bg.png');
+	font-family: 'Montserrat', sans-serif;
+		 animation-name: backgroundscroller;
+  animation-duration: 420s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal; 
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  bottom: 0px;
+			}
+    #container {
+        margin-top: 40px;
+        background: rgb(40,40,40);
+        text-align: center;
+        padding: 0px;
+    }
+    #heading {
+        font-family: 'Garamond', serif;
+    }
+    #modes {
+        padding: 10px 10px 20px 10px;
+    }
+    #mode_in {
+        background: rgb(22,22,22);
+        padding: 20px;
+    }
+    #content {
+        font-size: 2vw;
+    }
+    button#checkout {
+        font-size: 1.2vw;
+        float: center;
+        height: 3.3vw;
+        padding: 0px;
+        background: #3fc3ff;
+        border-radius: 0px;
+        text-transform: none;
+        margin-top: 5px;
+    }
+</style>
+</head>
+
+<body>		
+    <div class="row">
+        <div class="col s10 offset-s1" id="container">
+            <div class="col s12" id="heading">
+               <h4>My own special Order</h4>
+            </div>
+            <div id="modes" class="col s12">
+                <div id="mode" class="col s12 m6">
+                    <div id="mode_in"class="col s12">
+                        <img src="img\thumb_confirm.jpg" class="col s4 img-responsive" id="thumb">
+                        <div class="col s8" id="content">
+                            <div>Request a designing order</div>
+                            <button class="btn waves-effect waves-light col s6 offset-s3" id="checkout" type="submit" name="action">Request
+                                </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mode" class="col s12 m6">
+                    <div id="mode_in" class="col s12">
+                            <img src="img\thumb_confirm.jpg" class="col s4 img-responsive" id="thumb">
+                            <div class="col s8" id="content">
+                                <div>Upload and Print for myself</div>
+                                <button class="btn waves-effect waves-light col s6 offset-s3" id="checkout" type="submit" name="action">Upload
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+		
+</body>
+</html>

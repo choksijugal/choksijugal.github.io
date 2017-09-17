@@ -5,11 +5,30 @@
         body {
             background: #000;
         }
-        svg {
-            height: 350px;
+        p#loading_text {
+            opacity: 0;
+            text-align: center;
+            font-family: 'Garamond', serif;
+            font-weight: 50;
+            color: #eee;
+            animation: pulse 2s ease-in-out infinite;
+            animation-delay: 4s;
+            font-size: 22px;
             position: absolute;
-            left: 35vw;
-            top: 23vh;
+            left: 47.1vw;
+            top: 68vh;
+        }
+
+        @keyframes pulse {
+            50% {
+                opacity: 1;
+            }
+        }
+        svg {
+            height: 50vh;
+            position: absolute;
+            left: 33vw;
+            top: 21vh;
             fill: #eee; 
         }
         .st3 {
@@ -28,7 +47,7 @@
   animation-iteration-count: 1;
   
   animation-name: DrawLine, FadeStroke, FillIn;
-  animation-duration: 3.5s, 0.5s, 0.75s;
+  animation-duration: 3.5s, 0.5s, 0.5s;
   animation-delay: 0s, 2.8s, 2.8s;
   stroke-dashArray: 1275;
   stroke-dashoffset: 1275; 
@@ -41,7 +60,7 @@
   animation-iteration: 1;
   
   animation-name: FillIn;
-  animation-duration: 0.75s;
+  animation-duration: 0.5s;
   animation-delay: 2.8s;
 }
 @keyframes DrawLine {
@@ -328,6 +347,7 @@
    </g>
 </g>
 </svg>
+<p id="loading_text">LOADING</p>
    
 </body>
 
