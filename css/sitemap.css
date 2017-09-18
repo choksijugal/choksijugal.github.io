@@ -5,6 +5,7 @@
     background: #000;
     padding-top: 30px; 
     font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
 }
 
 #quick a:hover {
@@ -22,7 +23,7 @@
     border-width: 0px 0px 1px 0px;
     border-color: #444;
     font-family: 'Garamond', serif;
-    font-size: 28px;
+    font-size: 1.94vw;
     padding-bottom: 5px;
 }
 #quick a{
@@ -68,3 +69,8 @@ margin-top: 12px;
     margin-right: 50px;
     float: right;
 }
+@media only screen and (max-width: 992px) {
+    #quick, #contact, #discover, #sitemap_logo {
+        width: 100%;
+    }
+    }
