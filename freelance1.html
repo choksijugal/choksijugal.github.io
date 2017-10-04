@@ -64,7 +64,7 @@
         }
 
         button#checkout {
-            font-size: 22px;
+            font-size: 1.5vw;
             /* float: center; */
             padding: 0px !important;
             background: #3fc3ff;
@@ -132,38 +132,11 @@
 
         #radio_col {
             padding-left: 1.39vw;
+            margin-top: 0.8vw;
         }
 
         #radio_group {
             padding: 0.695vw 4.17vw 2.085vw 4.17vw;
-        }
-
-        @media only screen and (max-width: 992px) {
-            #heading {
-                font-size: 28px;
-            }
-            #options {
-                font-size: 16px;
-            }
-            #radio_col {
-                padding-left: 0px;
-            }
-            #radio_group {
-                padding: 10px 30px 30px 30px;
-            }
-            button#checkout {
-                font-size: 16px;
-            }
-            #card-title {
-                font-size: 12px;
-                line-height: 14px;
-            }
-            .card {
-                margin: 10px;
-            }
-            .card:hover {
-                margin: 10px 10px 8px 10px;
-            }
         }
 
         #modal_desc {
@@ -287,6 +260,66 @@
             border-width: 0.18vw;
             border-color: #3fc3ff;
         }
+        
+        @media only screen and (max-width: 992px) {
+            #heading, #heading1 {
+                font-size: 4vw;
+            }
+            #options {
+                font-size: 2.5vw;
+            }
+            #radio_col {
+                padding-left: 0px;
+            }
+            #radio_group {
+                padding: 1.01vw 3.03vw 3.03vw 3.03vw;
+            }
+            button#checkout {
+                font-size: 3vw;
+                height: 6vw;
+            }
+            #card-title {
+                font-size: 3vw;
+                line-height: 3.3vw;
+            }
+            .card {
+                margin: 10px;
+            }
+            .card:hover {
+                margin: 10px 10px 8px 10px;
+                border-width: 0px 0px 2px 0px;
+            }
+            .modal-content{
+                padding: 2vw !important;
+                height: 123vw;
+                overflow: visible;
+            }
+            .slider {
+                width: 76%;
+                padding-top: 38vw;
+                display: block;
+            }
+            .close {
+                font-size: 5vw;
+            }
+            img#thumb {
+                width: 12.5vw;
+            }
+            #modal_desc {
+                width: 100%;
+                margin: auto;
+                margin-top: 48vw;
+            }
+            img#made {
+                padding: 1vh 1.5vh 1vh 0vh;
+                margin: auto;
+            }
+            #desc {
+                
+                font-size: 2vh;
+            }
+        }
+
     </style>
 </head>
 
@@ -301,39 +334,49 @@
             </div>
             <div class="col s12" id="radio_group">
                 <form action="#">
-                    <div class="col s4" id="radio_col">
+                    <div class="col s6 l4" id="radio_col">
                         <p>
                             <input name="group1" type="radio" id="test1" />
                             <label for="test1" id="options">Posters</label>
                         </p>
+                    </div>
+                    <div class="col s6 l4" id="radio_col">
                         <p>
                             <input name="group1" type="radio" id="test2" />
                             <label for="test2" id="options">Logo</label>
                         </p>
+                    </div>
+                    <div class="col s6 l4" id="radio_col">
                         <p>
                             <input name="group1" type="radio" id="test3" />
                             <label for="test3" id="options">Website</label>
                         </p>
                     </div>
-                    <div class="col s4" id="radio_col">
+                    <div class="col s6 l4" id="radio_col">
                         <p>
                             <input name="group1" type="radio" id="test4" />
                             <label for="test4" id="options">Brochure</label>
                         </p>
+                    </div>
+                    <div class="col s6 l4" id="radio_col">
                         <p>
                             <input name="group1" type="radio" id="test5" />
                             <label for="test5" id="options">Business Cards</label>
                         </p>
+                    </div>
+                    <div class="col s6 l4" id="radio_col">
                         <p>
                             <input name="group1" type="radio" id="test6" />
                             <label for="test6" id="options">Letterheads</label>
                         </p>
                     </div>
-                    <div class="col s4" id="radio_col">
+                    <div class="col s6 l4" id="radio_col">
                         <p>
                             <input name="group1" type="radio" id="test7" />
                             <label for="test7" id="options">Videography</label>
                         </p>
+                    </div>
+                    <div class="col s6 l4" id="radio_col">
                         <p>
                             <input name="group1" type="radio" id="test8" />
                             <label for="test8" id="options">Other</label>
@@ -544,8 +587,42 @@
         }
     </script>
     <script>
+        var modal = document.getElementById('myModal');
+        var btn = document.getElementById("myBtn1");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function () {
+            modal.style.display = "block";
+            return false;
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        var modal = document.getElementById('myModal');
+        var btn = document.getElementById("myBtn2");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function () {
+            modal.style.display = "block";
+            return false;
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script>
             var modal = document.getElementById('myModal');
-            var btn = document.getElementById("myBtn1");
+            var btn = document.getElementById("myBtn3");
             var span = document.getElementsByClassName("close")[0];
             btn.onclick = function () {
                 modal.style.display = "block";
@@ -562,7 +639,7 @@
     </script>
     <script>
                 var modal = document.getElementById('myModal');
-                var btn = document.getElementById("myBtn2");
+                var btn = document.getElementById("myBtn4");
                 var span = document.getElementsByClassName("close")[0];
                 btn.onclick = function () {
                     modal.style.display = "block";
@@ -576,40 +653,6 @@
                         modal.style.display = "none";
                     }
                 }
-    </script>
-    <script>
-                    var modal = document.getElementById('myModal');
-                    var btn = document.getElementById("myBtn3");
-                    var span = document.getElementsByClassName("close")[0];
-                    btn.onclick = function () {
-                        modal.style.display = "block";
-                        return false;
-                    }
-                    span.onclick = function () {
-                        modal.style.display = "none";
-                    }
-                    window.onclick = function (event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    }
-    </script>
-    <script>
-                        var modal = document.getElementById('myModal');
-                        var btn = document.getElementById("myBtn4");
-                        var span = document.getElementsByClassName("close")[0];
-                        btn.onclick = function () {
-                            modal.style.display = "block";
-                            return false;
-                        }
-                        span.onclick = function () {
-                            modal.style.display = "none";
-                        }
-                        window.onclick = function (event) {
-                            if (event.target == modal) {
-                                modal.style.display = "none";
-                            }
-                        }
     </script>
 </body>
 
