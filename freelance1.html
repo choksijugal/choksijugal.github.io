@@ -43,24 +43,40 @@
             background: rgb(40, 40, 40);
             text-align: center;
             padding: 0px;
-            margin-top: 40px;
+            margin-top: 2.78vw;
         }
 
         #heading {
             font-family: 'Montserrat', sans-serif;
             font-weight: 300;
-            font-size: 36px;
+            font-size: 2.502vw;
+        }
+
+        #heading1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            text-align: left;
+            border-style: solid;
+            border-width: 0px 0px 1px 0px;
+            border-color: #3fc3ff;
+            padding: 0px;
+            font-size: 1.85vw;
         }
 
         button#checkout {
-            font-size: 16px;
+            font-size: 22px;
             /* float: center; */
             padding: 0px !important;
             background: #3fc3ff;
             border-radius: 0px;
             text-transform: none;
-            margin-top: 40px;
-            height: 40px;
+            margin-top: 2.78vw;
+            height: 2.78vw;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3fc3ff;
         }
 
         #line {
@@ -69,19 +85,19 @@
             height: 1px;
             border: 0;
             border-top: 1px solid #3fc3ff;
-            margin: 10px 0;
+            margin: 0.695vw 0;
             padding: 0;
         }
 
         #options {
-            font-size: 22px;
+            font-size: 1.529vw;
             color: #eee;
         }
 
         #card-title {
-            font-size: 20px;
+            font-size: 1.39vw;
             margin: 0px;
-            line-height: 20px;
+            line-height: 1.39vw;
             padding: 0px;
             display: inline;
             align: left;
@@ -91,22 +107,22 @@
         }
 
         .card .card-content {
-            padding: 8px 0px 8px 0px;
+            padding: 0.556vw 0px 0.556vw 0px;
             background: #000;
             color: #eee;
             border-style: none;
         }
 
         .card {
-
-            margin: 30px 30px 30px 30px;
+            margin: 2.085vw;
+            z-index: 0;
         }
 
         .card:hover {
             border-style: solid;
             border-width: 0px 0px 2px 0px;
             border-color: #3fc3ff;
-            margin: 30px 30px 28px 30px;
+            margin: 2.085vw 2.085vw 1.946vw 2.085vw;
         }
 
         #card_cost {
@@ -115,11 +131,11 @@
         }
 
         #radio_col {
-            padding-left: 20px;
+            padding-left: 1.39vw;
         }
 
         #radio_group {
-            padding: 10px 60px 30px 60px;
+            padding: 0.695vw 4.17vw 2.085vw 4.17vw;
         }
 
         @media only screen and (max-width: 992px) {
@@ -135,6 +151,139 @@
             #radio_group {
                 padding: 10px 30px 30px 30px;
             }
+            button#checkout {
+                font-size: 16px;
+            }
+            #card-title {
+                font-size: 12px;
+                line-height: 14px;
+            }
+            .card {
+                margin: 10px;
+            }
+            .card:hover {
+                margin: 10px 10px 8px 10px;
+            }
+        }
+
+        #modal_desc {
+            width: 30.5%;
+            margin: 0 1% 0 1%;
+            float: right;
+            background: #000;
+            display: block;
+            top: 0;
+            padding: 1.29vw;
+            text-align: left;
+        }
+
+        #desc {
+            margin-top: 0.65vw;
+            padding: 0px;
+            font-size:0.94vw; 
+        }
+        img#made {
+            padding:0px;
+            margin-right: 0.65vw;
+        }
+        img#thumb {
+            width: 8.7vw;
+        }
+    </style>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.8);
+            max-height: 100%;
+            padding: 0.65vw;
+        }
+
+        .modal-content {
+            background-color: rgb(22, 22, 22);
+            margin: 5% auto;
+            padding: 1vw !important;
+            overflow: hidden;
+            width: 85%;
+            color: #eee;
+            height: 36vw;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 1.8vw;
+            font-weight: bold;
+            line-height: 0.9vw;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .slider {
+            width: 53.5%;
+            position: absolute;
+            padding-top: 27vw;
+        }
+
+        .slider>img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 0.5s;
+        }
+
+        .slider input[name='slide_switch'] {
+            position: fixed;
+            left: -9999px;
+        }
+
+        .slider label {
+            margin: 1.161vw 0 0 1.161vw;
+            padding-left: 2.28vw !important;
+            float: left;
+            cursor: pointer;
+            transition: all 0.5s;
+
+            opacity: 0.6;
+            visibility: hidden;
+        }
+
+        .slider label img {
+            display: block;
+            visibility: visible;
+            margin-left: -1.88vw;
+        }
+
+        .slider input[name='slide_switch']:checked+label {
+            opacity: 1;
+        }
+
+        .slider input[name='slide_switch']~img {
+            opacity: 0;
+            transform: scale(1);
+        }
+
+        .slider input[name='slide_switch']:checked+label+img {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .slider input[name='slide_switch']:checked+label img {
+            border-style: solid;
+            border-width: 0.18vw;
+            border-color: #3fc3ff;
         }
     </style>
 </head>
@@ -201,7 +350,7 @@
             <div class="col s12" id="trending_posters">
                 <div class="col s6 l3" id="poster">
                     <a href="#">
-                        <div class="card">
+                        <div class="card" id="myBtn">
                             <div class="card-image waves-effect waves-block waves-light ">
                                 <div id="portrait">
                                     <img class="activator responsive-img img " src="img\poster1.jpg">
@@ -289,8 +438,91 @@
                     </a>
                 </div>
             </div>
+
+            <div id="myModal" class="modal">
+
+
+                <!-- Modal content -->
+
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="slider" id="js">
+                        <input type="radio" name="slide_switch" id="id1" checked="checked" />
+                        <label for="id1">
+                                <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg"id="thumb"/>
+                            </label>
+                        <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg" width="100%" />
+
+                        <input type="radio" name="slide_switch" id="id2" />
+                        <label for="id2">
+                                <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg"id="thumb"/>
+                            </label>
+                        <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg" width="100%" />
+
+                        <input type="radio" name="slide_switch" id="id3" />
+                        <label for="id3">
+                                <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg"id="thumb"/>
+                            </label>
+                        <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg" width="100%" />
+
+                        <input type="radio" name="slide_switch" id="id4" />
+                        <label for="id4">
+                                <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg"id="thumb"/>
+                            </label>
+                        <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg" width="100%" />
+
+                        <input type="radio" name="slide_switch" id="id5" />
+                        <label for="id5">
+                                <img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg"id="thumb"/>
+                            </label>
+                        <img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg" width="100%" />
+                    </div>
+                    <div id="modal_desc">
+                        <div class="col s12" id="heading1">
+                            Project X
+                        </div>
+                        <div class="col s12" id="desc">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud
+                        </div>
+                        <div class="col s12" id="heading1">
+                           Made With
+                        </div>
+                        <div class="col s12" id="desc">
+                            <img id="made" class="col s3 img-responsive" src="img/poster1.jpg">
+                            <img id="made" class="col s3 img-responsive" src="img/poster1.jpg">
+                        </div>
+                        <div class="col s12" id="heading1">
+                            Designer
+                        </div>
+                        <div class="col s12" id="desc">
+                            <a href="#">Name</a><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
+    <script>
+        var modal = document.getElementById('myModal');
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function () {
+            modal.style.display = "block";
+            return false;
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>

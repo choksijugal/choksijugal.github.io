@@ -1,0 +1,194 @@
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="css\materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="css\materialize.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/sitemap.css" />
+    <link type="text/css" rel="stylesheet" href="css/header_new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @keyframes backgroundscroller {
+            from {
+                background-position: 0% 0%;
+            }
+            to {
+                background-position: 500% 500%, 400% 400%, 300% 300%, 200% 200%, 100% 100%;
+            }
+        }
+
+        body {
+
+            color: #eee;
+            background-color: rgba(5, 5, 5, 0.9);
+            background-image: url('img/bg.png');
+            font-family: 'Montserrat', sans-serif;
+            animation-name: backgroundscroller;
+            animation-duration: 420s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            bottom: 0px;
+        }
+
+        #container {
+            /* margin-top: 40px; */
+            background: rgb(40, 40, 40);
+            text-align: center;
+            padding: 0px;
+            margin-top: 80px;
+            padding-bottom: 40px;
+        }
+
+        #heading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 36px;
+        }
+
+        #line {
+            width: 98%;
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #3fc3ff;
+            margin: 10px 0;
+            padding: 0;
+        }
+
+        #card-title {
+            font-size: 20px;
+            margin: 0px;
+            line-height: 20px;
+            padding: 0px;
+            display: inline;
+            align: left;
+            font-family: 'Montserrat', sans-serif;
+
+            color: #eee;
+        }
+
+        .card .card-content {
+            padding: 8px 0px 8px 0px;
+            background: #000;
+            color: #eee;
+            border-style: none;
+        }
+
+        .card {
+
+            margin: 30px 30px 30px 30px;
+        }
+
+        .card:hover {
+            border-style: solid;
+            border-width: 0px 0px 2px 0px;
+            border-color: #3fc3ff;
+            margin: 30px 30px 28px 30px;
+        }
+
+        #card_cost {
+            font-family: 'Garamond', serif;
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 992px) {
+            #container {
+                margin-top: 20px;
+                padding-bottom: 20px;
+            }
+            #heading {
+                font-size: 28px;
+            }
+            #card-title {
+                font-size: 12px;
+                line-height: 14px;
+            }
+            .card {
+                margin: 10px;
+            }
+            .card:hover {
+                margin: 10px 10px 8px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="row">
+        <div class="col s10 offset-s1" id="container">
+            <div class="col s12" id="heading">
+                <h4 color="#3fc3ff" id="heading">Select The Designer</h4>
+                <hr id="line">
+            </div>
+            <div class="col s12" id="trending_posters">
+                <div class="col s6 l3" id="poster">
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                                <div id="portrait">
+                                    <img class="activator responsive-img img " src="img\poster1.png">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator" id="card-title">A</span><br />
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 l3" id="poster">
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                                <div id="portrait">
+                                    <img class="activator responsive-img img " src="img\poster1.png">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator" id="card-title">B</span><br />
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 l3" id="poster">
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                                <div id="portrait">
+                                    <img class="activator responsive-img img " src="img\poster1.png">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator" id="card-title">C</span><br />
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 l3" id="poster">
+                    <a href="#">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light ">
+                                <div id="portrait">
+                                    <img class="activator responsive-img img " src="img\poster1.png">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator" id="card-title">D</span><br />
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
