@@ -120,9 +120,9 @@
 
         .card:hover {
             border-style: solid;
-            border-width: 0px 0px 2px 0px;
+            border-width: 0px 0px 0.135vw 0px;
             border-color: #3fc3ff;
-            margin: 2.085vw 2.085vw 1.946vw 2.085vw;
+            margin: 2.085vw 2.085vw 1.95vw 2.085vw;
         }
 
         #card_cost {
@@ -180,12 +180,14 @@
         #desc {
             margin-top: 0.65vw;
             padding: 0px;
-            font-size:0.94vw; 
+            font-size: 0.94vw;
         }
+
         img#made {
-            padding:0px;
+            padding: 0px;
             margin-right: 0.65vw;
         }
+
         img#thumb {
             width: 8.7vw;
         }
@@ -365,7 +367,7 @@
                 </div>
                 <div class="col s6 l3" id="poster">
                     <a href="#">
-                        <div class="card">
+                        <div class="card" id="myBtn1">
                             <div class="card-image waves-effect waves-block waves-light ">
                                 <div id="portrait">
                                     <img class="activator responsive-img img " src="img\poster1.jpg">
@@ -374,12 +376,13 @@
                             <div class="card-content">
                                 <span class="card-title activator" id="card-title">Project Y</span><br />
                             </div>
+
                         </div>
                     </a>
                 </div>
                 <div class="col s6 l3" id="poster">
                     <a href="#">
-                        <div class="card">
+                        <div class="card" id="myBtn2">
                             <div class="card-image waves-effect waves-block waves-light ">
                                 <div id="portrait">
                                     <img class="activator responsive-img img " src="img\poster1.jpg">
@@ -394,7 +397,7 @@
                 </div>
                 <div class="col s6 l3" id="poster">
                     <a href="#">
-                        <div class="card">
+                        <div class="card" id="myBtn3">
                             <div class="card-image waves-effect waves-block waves-light ">
                                 <div id="portrait">
                                     <img class="activator responsive-img img " src="img\poster1.jpg">
@@ -409,7 +412,7 @@
                 </div>
                 <div class="col s6 l3" id="poster">
                     <a href="#">
-                        <div class="card">
+                        <div class="card" id="myBtn4">
                             <div class="card-image waves-effect waves-block waves-light ">
                                 <div id="portrait">
                                     <img class="activator responsive-img img " src="img\poster1.jpg">
@@ -424,7 +427,7 @@
                 </div>
                 <div class="col s6 l3" id="poster">
                     <a href="#">
-                        <div class="card">
+                        <div class="card" id="myBtn5">
                             <div class="card-image waves-effect waves-block waves-light ">
                                 <div id="portrait">
                                     <img class="activator responsive-img img " src="img\poster1.jpg">
@@ -486,7 +489,7 @@
                             Ut enim ad minim veniam, quis nostrud
                         </div>
                         <div class="col s12" id="heading1">
-                           Made With
+                            Made With
                         </div>
                         <div class="col s12" id="desc">
                             <img id="made" class="col s3 img-responsive" src="img/poster1.jpg">
@@ -522,6 +525,91 @@
                 modal.style.display = "none";
             }
         }
+    </script>
+    <script>
+        var modal = document.getElementById('myModal');
+        var btn = document.getElementById("myBtn5");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function () {
+            modal.style.display = "block";
+            return false;
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+            var modal = document.getElementById('myModal');
+            var btn = document.getElementById("myBtn1");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+                return false;
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+    </script>
+    <script>
+                var modal = document.getElementById('myModal');
+                var btn = document.getElementById("myBtn2");
+                var span = document.getElementsByClassName("close")[0];
+                btn.onclick = function () {
+                    modal.style.display = "block";
+                    return false;
+                }
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+    </script>
+    <script>
+                    var modal = document.getElementById('myModal');
+                    var btn = document.getElementById("myBtn3");
+                    var span = document.getElementsByClassName("close")[0];
+                    btn.onclick = function () {
+                        modal.style.display = "block";
+                        return false;
+                    }
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                    }
+                    window.onclick = function (event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+    </script>
+    <script>
+                        var modal = document.getElementById('myModal');
+                        var btn = document.getElementById("myBtn4");
+                        var span = document.getElementsByClassName("close")[0];
+                        btn.onclick = function () {
+                            modal.style.display = "block";
+                            return false;
+                        }
+                        span.onclick = function () {
+                            modal.style.display = "none";
+                        }
+                        window.onclick = function (event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
     </script>
 </body>
 
